@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101d32">
+  <title>404 — Page Not Found | Lexford & Associates</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/error.css">
+</head>
+<body>
+
+  <main class="error-page">
+    <header class="error-nav">
+      <a href="index.html" class="brand" aria-label="Lexford home">
+        <span class="brand-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+        <span class="brand-name">
+          <strong>LEXFORD</strong>
+          <small>& ASSOCIATES</small>
+        </span>
+      </a>
+
+      <a href="contact.html" class="nav-contact">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Contact Us</span>
+      </a>
+    </header>
+
+    <section class="error-content">
+      <div class="error-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+
+        <div class="art-number">404</div>
+
+        <div class="art-emblem">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+
+        <span class="art-dot dot-one"></span>
+        <span class="art-dot dot-two"></span>
+        <span class="art-dot dot-three"></span>
+        <span class="art-line"></span>
+      </div>
+
+      <div class="error-copy">
+        <span class="eyebrow">
+          <span class="eyebrow-line"></span>
+          AN UNEXPECTED DETOUR
+        </span>
+
+        <h1>This page is<br><em>out of order.</em></h1>
+
+        <p class="error-description">
+          It appears this page has taken an unexpected turn.
+          The address may be incorrect, or the page may have
+          been moved. Let us help you find your way back.
+        </p>
+
+        <div class="error-actions">
+          <a onclick="history.back()" class="btn-primary">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to dashboard
+          </a>
+
+          <button type="button" class="btn-secondary" id="goBack">
+            Go Back
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="error-divider"></div>
+
+        <div class="assistance">
+          <span class="assistance-icon">
+            <i class="fa-solid fa-headset"></i>
+          </span>
+
+          <div>
+            <strong>Need legal assistance?</strong>
+            <p>Our team is here to point you in the right direction.</p>
+            <a href="contact.html">
+              Get in touch <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="error-footer">
+      <span>© <span id="year"></span> Lexford & Associates</span>
+      <span class="footer-note">
+        <i class="fa-solid fa-shield-halved"></i>
+        Trusted Counsel. Lasting Confidence.
+      </span>
+    </footer>
+  </main>
+
+  <!-- <script src="js/error.js"></script> -->
+</body>
+</html>
