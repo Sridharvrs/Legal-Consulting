@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a1628">
+
+  <title>Sign In | Stackly & Associates</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/login.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="login-page">
+
+  <!-- HEADER -->
+  <header class="login-header">
+    <a href="index.html" class="login-brand">
+      <span class="brand-symbol">
+        <i class="fa-solid fa-scale-balanced"></i>
+      </span>
+
+      <span class="brand-text">
+        <strong>Stackly</strong>
+        <small>& ASSOCIATES</small>
+      </span>
+    </a>
+
+    <a href="index.html" class="back-website">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back to website</span>
+    </a>
+  </header>
+
+  <main class="login-layout">
+
+    <!-- LEFT VISUAL PANEL -->
+    <aside class="login-visual">
+      <div class="visual-decoration decoration-one"></div>
+      <div class="visual-decoration decoration-two"></div>
+
+      <div class="visual-content">
+        <span class="visual-eyebrow">
+          <span></span>
+          TRUST. INTEGRITY. JUSTICE.
+        </span>
+
+        <h1>
+          Your rights.<br>
+          Your future.<br>
+          <em>Our commitment.</em>
+        </h1>
+
+        <p>
+          A trusted legal partnership begins with a conversation.
+          Sign in to continue your journey with Stackly & Associates.
+        </p>
+
+        <div class="visual-rule"></div>
+
+        <div class="trust-list">
+          <div class="trust-item">
+            <span class="trust-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            <div>
+              <strong>Confidentiality first</strong>
+              <small>Your legal matters deserve discretion.</small>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </span>
+            <div>
+              <strong>Professional excellence</strong>
+              <small>Focused on clarity and sound guidance.</small>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </span>
+            <div>
+              <strong>Built on trust</strong>
+              <small>Relationships that put people first.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual-bottom">
+        <span>Stackly & ASSOCIATES</span>
+        <span class="bottom-line"></span>
+        <span>EST. IN INTEGRITY</span>
+      </div>
+    </aside>
+
+    <!-- LOGIN PANEL -->
+    <section class="login-main">
+      <div class="login-card" id="lm">
+
+        <div class="mobile-brand-symbol">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+
+        <div class="login-heading">
+          <span class="login-kicker">WELCOME BACK</span>
+          <h2>Sign in to your account</h2>
+
+          <p class="login-sub">
+            Access your legal matters and continue with confidence.
+          </p>
+        </div>
+
+        <!-- ROLE SELECTOR -->
+        <div class="role-section">
+          <p class="role-label">Choose your account type</p>
+
+          <div class="role-options">
+
+            <button
+              type="button"
+              class="role-card active on"
+              data-role="client"
+              aria-pressed="true"
+            >
+              <span class="role-icon">
+                <i class="fa-regular fa-user"></i>
+              </span>
+
+              <span class="role-info">
+                <strong>Client</strong>
+                <small>Access legal services</small>
+              </span>
+
+              <span class="role-check">
+                <i class="fa-solid fa-check"></i>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="role-card"
+              data-role="attorney"
+              aria-pressed="false"
+            >
+              <span class="role-icon">
+                <i class="fa-solid fa-gavel"></i>
+              </span>
+
+              <span class="role-info">
+                <strong>Attorney</strong>
+                <small>Professional workspace</small>
+              </span>
+
+              <span class="role-check">
+                <i class="fa-solid fa-check"></i>
+              </span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" novalidate>
+
+          <div class="login-field">
+            <label for="email" id="emailLabel">Email Address</label>
+
+            <div class="login-input-wrap">
+              <i class="fa-regular fa-envelope field-icon"></i>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="username"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="login-field">
+            <div class="password-label-row">
+              <label for="password">Password</label>
+              <a href="forgot-password.html" class="forgot-link">
+                Forgot password?
+              </a>
+            </div>
+
+            <div class="login-input-wrap">
+              <i class="fa-solid fa-lock field-icon"></i>
+
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                id="pwdToggle"
+                class="password-toggle"
+                aria-label="Show password"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- REMEMBER ME -->
+          <label class="remember-row">
+            <input type="checkbox" name="remember" id="remember">
+            <span>Remember me on this device</span>
+          </label>
+
+          <!-- LOGIN MESSAGE -->
+          <p
+            id="loginError"
+            class="login-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="login-submit">
+            <span id="btnText">Sign in as Client</span>
+
+            <span class="submit-icon">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </button>
+
+          <div class="login-security">
+            <i class="fa-solid fa-lock"></i>
+            Your account information deserves protection.
+          </div>
+
+        </form>
+
+        <div class="signup-prompt">
+          Don't have an account?
+          <a href="signup.html">Create an account</a>
+        </div>
+
+        <p class="login-disclaimer">
+          Demo login only. Connect an authentication service to verify
+          credentials and securely manage legal account access.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

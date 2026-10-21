@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly & Associates — Premier Legal Consulting</title>
+  <meta name="description" content="Stackly & Associates — Premier legal consulting firm offering expert counsel in corporate law, litigation, family law, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-scales">
+      <div class="loader-scales-bowl left"></div>
+      <div class="loader-scales-bowl right"></div>
+    </div>
+    <div class="loader-text">Stackly</div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <div class="nav-wrapper">
+    <!-- Top utility bar -->
+    <div class="nav-bar-top">
+      <div class="nav-bar-top-inner">
+        <div class="nav-top-info">
+          <span>
+            <i class="fa-solid fa-phone-volume"></i>
+            +1 (212) 555-0190
+          </span>
+          <span>
+            <i class="fa-solid fa-envelope"></i>
+            consult@Stacklylaw.com
+          </span>
+        </div>
+        <div class="nav-top-social">
+          <span style="font-size:0.75rem;color:var(--gray-300);margin-right:4px;">Follow Us</span>
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="#" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main nav -->
+    <nav class="nav-main">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.webp" alt="Stackly & Associates" class="nav-logo-img">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="practice-areas.html" class="nav-link">Practice Areas</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-btn-login">
+          <i class="fa-regular fa-user"></i>
+          Client Login
+        </a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu-overlay"></div>
+  <aside class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">STACK<span>LY</span></div>
+      <button class="mobile-menu-close" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link">Home <span class="menu-num">01</span></a>
+      <a href="services.html" class="mobile-menu-link">Services <span class="menu-num">02</span></a>
+      <a href="practice-areas.html" class="mobile-menu-link">Practice Areas <span class="menu-num">03</span></a>
+      <a href="about.html" class="mobile-menu-link">About <span class="menu-num">04</span></a>
+      <a href="contact.html" class="mobile-menu-link">Contact <span class="menu-num">05</span></a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="login.html" class="mobile-menu-login-btn">
+        <i class="fa-regular fa-user"></i>
+        Client Login
+      </a>
+      <div class="mobile-menu-contact">
+        <p>+1 (212) 555-0190</p>
+        <p><a href="mailto:consult@Stacklylaw.com">consult@Stacklylaw.com</a></p>
+        <p>420 Madison Avenue, New York, NY</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== PAGE CONTENT ===== -->
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('images/img10.webp');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <span class="eyebrow hero-eyebrow" style="color: var(--gold-400);">Est. 1985 — Trusted Legal Excellence</span>
+        <h1 class="hero-title">
+          Justice Guided by<br>
+          <span class="hero-title-accent" data-type="Integrity|Experience|Dedication|Precision">Integrity</span>
+        </h1>
+        <div class="divider-gold"></div>
+        <p class="hero-subtitle">
+          For over three decades, Stackly &amp; Associates has provided premier legal counsel
+          to corporations, families, and individuals. We combine deep legal expertise with
+          unwavering commitment to every client we serve.
+        </p>
+        <div class="hero-actions">
+          <a href="error.html" class="btn btn-gold">Explore Services</a>
+          <a href="error.html" class="btn btn-outline-light">Schedule Consultation</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <span class="hero-trust-num" data-count="500" data-suffix="+">0</span>
+            <span class="hero-trust-label">Cases Won</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num" data-count="35" data-suffix="+">0</span>
+            <span class="hero-trust-label">Years Experience</span>
+          </div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num" data-count="1200" data-suffix="+">0</span>
+            <span class="hero-trust-label">Clients Served</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#welcome" class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- SECTION 2: WELCOME / INTRO -->
+  <section class="section section-ivory" id="welcome">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-left reveal-left">
+          <span class="eyebrow">Welcome to Stackly</span>
+          <h2>A Legacy of Legal Excellence &amp; Trust</h2>
+          <div class="divider-gold"></div>
+          <p class="welcome-lead">
+            At Stackly &amp; Associates, we believe the law is more than statutes and precedents —
+            it is a powerful tool for protecting what matters most to you.
+          </p>
+          <p>
+            Our attorneys bring decades of combined experience across multiple practice areas,
+            delivering strategic counsel and fierce advocacy. Whether navigating complex corporate
+            transactions or sensitive family matters, we approach every case with the same
+            unwavering dedication and meticulous attention to detail.
+          </p>
+          <div class="welcome-features">
+            <div class="welcome-feature">
+              <div class="welcome-feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+              </div>
+              <div>
+                <h4>Proven Track Record</h4>
+                <p>Over 500 successful cases with a 94% win rate.</p>
+              </div>
+            </div>
+            <div class="welcome-feature">
+              <div class="welcome-feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4>24/7 Availability</h4>
+                <p>Round-the-clock support for urgent legal matters.</p>
+              </div>
+            </div>
+          </div>
+          <a href="error.html" class="btn btn-navy">Learn More About Us</a>
+        </div>
+        <div class="welcome-right reveal-right">
+          <div class="welcome-image-stack">
+            <img src="images/img11.webp" alt="Attorney consulting clients" class="welcome-img-main lazy-img">
+            <img src="images/img12.webp" alt="Gavel and legal book" class="welcome-img-accent lazy-img">
+            <div class="welcome-badge">
+              <span class="welcome-badge-num">35</span>
+              <span class="welcome-badge-text">Years of<br>Excellence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PRACTICE AREAS PREVIEW -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2>Our Core Practice Areas</h2>
+        <div class="divider-gold center"></div>
+        <p class="section-header-desc">
+          We offer comprehensive legal services across multiple disciplines, ensuring
+          expert representation no matter the complexity of your case.
+        </p>
+      </div>
+
+      <div class="practice-preview-grid reveal-stagger">
+        <div class="practice-preview-card">
+          <div class="practice-preview-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+          </div>
+          <h3>Corporate Law</h3>
+          <p>Strategic counsel for mergers, acquisitions, compliance, and corporate governance.</p>
+          <a href="error.html" class="practice-preview-link">Explore <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+        </div>
+        <div class="practice-preview-card">
+          <div class="practice-preview-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25M12 3c-1.5 0-2.25 1-2.25 2.25S10.5 7.5 12 7.5M12 3c1.5 0 2.25 1 2.25 2.25S13.5 7.5 12 7.5M12 7.5v2.25M5.25 6.75L7.5 12M7.5 12L5.25 9.75M7.5 12H4.5M18.75 6.75L16.5 12M16.5 12l2.25-2.25M16.5 12h3M12 17.25L5 20.25M12 17.25l7 3"/></svg>
+          </div>
+          <h3>Civil Litigation</h3>
+          <p>Fierce courtroom advocacy for disputes, torts, and complex civil matters.</p>
+          <a href="error.html" class="practice-preview-link">Explore <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+        </div>
+        <div class="practice-preview-card">
+          <div class="practice-preview-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-.525 0-1.038.082-1.524.243a3.844 3.844 0 00-7.576 0A4.665 4.665 0 003 8.25c0 2.485 2.099 4.5 4.688 4.5h.018c.282.018.562.018.843.018h9.099c.28 0 .561 0 .843-.018h.018c2.588 0 4.687-2.015 4.687-4.5z"/></svg>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12.75l3.75 3.75M6 15h6M18.75 4.5l-3 3M15 6.75l1.5-1.5" style="display:none;"/>
+          </div>
+          <h3>Family Law</h3>
+          <p>Compassionate guidance through divorce, custody, adoption, and estate planning.</p>
+          <a href="error.html" class="practice-preview-link">Explore <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+        </div>
+        <div class="practice-preview-card">
+          <div class="practice-preview-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.68.227-.815.525M3 4.5h.015M3 9h.015M3 13.5h.015M3 18h.015"/></svg>
+          </div>
+          <h3>Intellectual Property</h3>
+          <p>Protecting patents, trademarks, copyrights, and trade secrets globally.</p>
+          <a href="error.html" class="practice-preview-link">Explore <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- PREMIUM SECTION 1: OUR PHILOSOPHY -->
+<section class="lx-philosophy">
+  <div class="lx-philosophy-bg"></div>
+  <div class="lx-philosophy-overlay"></div>
+
+  <div class="container lx-philosophy-inner">
+    <div class="lx-philosophy-content reveal-left">
+      <span class="eyebrow">The Stackly Philosophy</span>
+
+      <h2>
+        The Right Counsel.<br>
+        <span>The Strongest Foundation.</span>
+      </h2>
+
+      <div class="divider-gold"></div>
+
+      <p>
+        Every challenge deserves thoughtful counsel. Every decision
+        deserves a strategy. And every client deserves a legal partner
+        who sees beyond the immediate issue to protect what comes next.
+      </p>
+
+      <a href="error.html" class="lx-text-link">
+        Discover Our Philosophy <span>↗</span>
+      </a>
+    </div>
+
+    <div class="lx-philosophy-note reveal-right">
+      <span class="lx-note-mark">“</span>
+      <p>
+        True legal excellence begins with understanding
+        what matters most to the people we represent.
+      </p>
+      <span class="lx-note-line"></span>
+      <small>OUR COMMITMENT TO YOU</small>
+    </div>
+  </div>
+</section>
+
+
+<!-- PREMIUM SECTION 2: PRACTICE AREAS -->
+<section class="section lx-practice-showcase">
+  <div class="container">
+    <header class="section-header text-center reveal">
+      <span class="eyebrow">Focused Expertise</span>
+      <h2>Clarity in Every Legal Challenge</h2>
+      <div class="divider-gold center"></div>
+      <p class="lx-section-desc">
+        Thoughtful strategies, focused expertise, and counsel
+        tailored to the matters that shape your future.
+      </p>
+    </header>
+
+    <div class="lx-practice-grid">
+
+      <a href="error.html" class="lx-practice-card reveal">
+        <div class="lx-practice-image"
+          style="background-image:url('images/img13.webp')">
+        </div>
+        <div class="lx-practice-shade"></div>
+        <span class="lx-practice-number">01 / BUSINESS</span>
+        <div class="lx-practice-info">
+          <span class="lx-practice-icon">⚖</span>
+          <h3>Corporate &amp; Business Law</h3>
+          <p>Strategic guidance for transactions, contracts, and business growth.</p>
+          <span class="lx-practice-link">Explore Practice <b>↗</b></span>
+        </div>
+      </a>
+
+      <a href="practice-areas.html" class="lx-practice-card reveal">
+        <div class="lx-practice-image"
+          style="background-image:url('images/img14.webp')">
+        </div>
+        <div class="lx-practice-shade"></div>
+        <span class="lx-practice-number">02 / ADVOCACY</span>
+        <div class="lx-practice-info">
+          <span class="lx-practice-icon">§</span>
+          <h3>Litigation &amp; Disputes</h3>
+          <p>Careful preparation and determined representation when it matters.</p>
+          <span class="lx-practice-link">Explore Practice <b>↗</b></span>
+        </div>
+      </a>
+
+      <a href="practice-areas.html" class="lx-practice-card reveal">
+        <div class="lx-practice-image"
+          style="background-image:url('images/img15.webp')">
+        </div>
+        <div class="lx-practice-shade"></div>
+        <span class="lx-practice-number">03 / PERSONAL</span>
+        <div class="lx-practice-info">
+          <span class="lx-practice-icon">◇</span>
+          <h3>Family &amp; Estate Law</h3>
+          <p>Considered legal guidance for families, legacies, and life's transitions.</p>
+          <span class="lx-practice-link">Explore Practice <b>↗</b></span>
+        </div>
+      </a>
+
+      <a href="practice-areas.html" class="lx-practice-card reveal">
+        <div class="lx-practice-image"
+          style="background-image:url('images/img16.webp')">
+        </div>
+        <div class="lx-practice-shade"></div>
+        <span class="lx-practice-number">04 / PROTECTION</span>
+        <div class="lx-practice-info">
+          <span class="lx-practice-icon">⌂</span>
+          <h3>Property &amp; Real Estate</h3>
+          <p>Practical counsel for property transactions and contractual obligations.</p>
+          <span class="lx-practice-link">Explore Practice <b>↗</b></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PREMIUM SECTION 3: OUR DIFFERENCE -->
+<section class="section lx-difference">
+  <div class="container lx-difference-grid">
+
+    <div class="lx-difference-visual reveal-left">
+      <div class="lx-difference-photo"></div>
+      <div class="lx-difference-frame"></div>
+
+      <div class="lx-difference-stamp">
+        <span>Stackly</span>
+        <b>&amp;</b>
+        <span>ASSOCIATES</span>
+        <i>COUNSEL WITH PURPOSE</i>
+      </div>
+
+      <div class="lx-difference-caption">
+        <span>01 — OUR STANDARD</span>
+        <p>Every detail matters.</p>
+      </div>
+    </div>
+
+    <div class="lx-difference-copy reveal-right">
+      <span class="eyebrow">The Stackly Difference</span>
+      <h2>Personal Attention.<br><em>Purposeful Advocacy.</em></h2>
+      <div class="divider-gold"></div>
+
+      <p class="lx-difference-lead">
+        The strongest legal relationships are built on trust,
+        transparency, and a clear understanding of your goals.
+      </p>
+
+      <div class="lx-difference-item">
+        <span>01</span>
+        <div>
+          <h3>Strategy Before Action</h3>
+          <p>We take time to understand the facts, assess options, and establish a considered path forward.</p>
+        </div>
+      </div>
+
+      <div class="lx-difference-item">
+        <span>02</span>
+        <div>
+          <h3>Communication Without Guesswork</h3>
+          <p>Clear explanations and meaningful updates help you understand your matter at every stage.</p>
+        </div>
+      </div>
+
+      <div class="lx-difference-item">
+        <span>03</span>
+        <div>
+          <h3>Commitment to Your Interests</h3>
+          <p>Our approach is shaped around your objectives, circumstances, and long-term priorities.</p>
+        </div>
+      </div>
+
+      <a href="error.html" class="btn btn-navy">Meet Stackly &amp; Associates</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PREMIUM SECTION 4: OUR APPROACH -->
+<section class="lx-approach">
+  <div class="lx-approach-bg"></div>
+  <div class="lx-approach-overlay"></div>
+
+  <div class="container lx-approach-inner">
+    <header class="section-header text-center reveal">
+      <span class="eyebrow">A Thoughtful Process</span>
+      <h2>From Uncertainty to a Clearer Path</h2>
+      <div class="divider-gold center"></div>
+      <p class="lx-section-desc">
+        A structured, transparent approach designed to help you
+        make informed decisions with greater confidence.
+      </p>
+    </header>
+
+    <div class="lx-steps">
+      <article class="lx-step reveal">
+        <span class="lx-step-number">01</span>
+        <div class="lx-step-symbol">◎</div>
+        <h3>Listen</h3>
+        <p>We begin by understanding your situation, concerns, and desired outcomes.</p>
+      </article>
+
+      <article class="lx-step reveal">
+        <span class="lx-step-number">02</span>
+        <div class="lx-step-symbol">⌘</div>
+        <h3>Strategize</h3>
+        <p>We assess the circumstances and explain potential options and considerations.</p>
+      </article>
+
+      <article class="lx-step reveal">
+        <span class="lx-step-number">03</span>
+        <div class="lx-step-symbol">⚖</div>
+        <h3>Advocate</h3>
+        <p>We work toward your objectives through careful preparation and representation.</p>
+      </article>
+
+      <article class="lx-step reveal">
+        <span class="lx-step-number">04</span>
+        <div class="lx-step-symbol">✧</div>
+        <h3>Move Forward</h3>
+        <p>We help you understand the next steps and plan for what lies ahead.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- PREMIUM SECTION 5: CONSULTATION CTA -->
+<section class="lx-final-cta">
+  <div class="lx-final-cta-bg"></div>
+  <div class="lx-final-cta-overlay"></div>
+
+  <div class="container lx-final-cta-content reveal">
+    <span class="eyebrow">Your Next Step Starts Here</span>
+    <h2>When It Matters Most,<br><em>Choose Counsel With Purpose.</em></h2>
+    <div class="divider-gold center"></div>
+    <p>
+      Speak with our team about your legal concerns, understand your options,
+      and take the next step with greater clarity.
+    </p>
+
+    <div class="lx-final-cta-actions">
+      <a href="error.html" class="btn btn-gold">Request a Consultation <span>↗</span></a>
+      <a href="error.html" class="btn btn-outline-light">Explore Our Services</a>
+    </div>
+
+    <div class="lx-final-cta-foot">
+      <span>Stackly &amp; ASSOCIATES</span>
+      <span>INTEGRITY · EXPERIENCE · DEDICATION</span>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SECTION 4: WHY CHOOSE US -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-left reveal-left">
+          <span class="eyebrow">Why Stackly</span>
+          <h2>Distinguished by Excellence, Driven by Results</h2>
+          <div class="divider-gold"></div>
+          <p>
+            What sets us apart is not just what we know, but how we apply it. Every case
+            receives personalized attention from senior partners, ensuring no detail is
+            overlooked and no strategy is left unexplored.
+          </p>
+
+          <div class="why-progress-list">
+            <div class="why-progress-item">
+              <div class="why-progress-top">
+                <span>Client Satisfaction</span>
+                <span>98%</span>
+              </div>
+              <div class="why-progress-bar"><div class="why-progress-fill" style="--w: 98%"></div></div>
+            </div>
+            <div class="why-progress-item">
+              <div class="why-progress-top">
+                <span>Case Success Rate</span>
+                <span>94%</span>
+              </div>
+              <div class="why-progress-bar"><div class="why-progress-fill" style="--w: 94%"></div></div>
+            </div>
+            <div class="why-progress-item">
+              <div class="why-progress-top">
+                <span>Pro Bono Commitment</span>
+                <span>85%</span>
+              </div>
+              <div class="why-progress-bar"><div class="why-progress-fill" style="--w: 85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-right reveal-right">
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.674M9.497 13.125a7.454 7.454 0 00.981-3.674M12 3v18.75m0-18.75c-1.5 0-2.625 1-2.625 2.25S10.5 7.5 12 7.5m0-4.5c1.5 0 2.625 1 2.625 2.25S13.5 7.5 12 7.5"/></svg>
+            </div>
+            <h3>Award-Winning Firm</h3>
+            <p>Recognized by Chambers USA and Best Lawyers for 15 consecutive years.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3>Senior Partner Access</h3>
+            <p>Direct communication with experienced partners on every case, no exceptions.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <h3>Confidential &amp; Secure</h3>
+            <p>Bank-grade security protocols protect your sensitive legal information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TESTIMONIALS -->
+  <section class="section section-dark testimonials-section">
+    <div class="testimonials-bg-pattern"></div>
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Client Voices</span>
+        <h2>What Our Clients Say</h2>
+        <div class="divider-gold center"></div>
+      </div>
+
+      <div class="testimonials-slider reveal" id="testimonialsSlider">
+        <div class="testimonial-card active" data-index="0">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">
+            Stackly &amp; Associates handled our company merger with extraordinary precision.
+            Their strategic approach saved us millions and the entire process was seamless.
+            I cannot recommend them highly enough.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background-image: url('images/img5.webp');"></div>
+            <div>
+              <h4>Victoria Ashworth</h4>
+              <span>CEO, Ashworth Holdings</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-index="1">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">
+            During the most difficult period of my life, the family law team at Stackly
+            was both my legal shield and my emotional anchor. They fought for my children
+            and won. Forever grateful.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background-image: url('images/img17.webp');"></div>
+            <div>
+              <h4>Marcus Delaney</h4>
+              <span>Family Law Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-index="2">
+          <div class="testimonial-quote-mark">&ldquo;</div>
+          <p class="testimonial-text">
+            Their intellectual property team secured three patents for our startup in
+            record time. The level of detail and global perspective they brought was
+            unmatched. True professionals.
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background-image: url('images/img18.webp');"></div>
+            <div>
+              <h4>David Chen</h4>
+              <span>Founder, TechNova Inc.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-controls">
+        <button class="testimonials-prev" id="testPrev" aria-label="Previous testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+        </button>
+        <div class="testimonials-dots" id="testDots"></div>
+        <button class="testimonials-next" id="testNext" aria-label="Next testimonial">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CTA + NEWSLETTER -->
+  <section class="section cta-section">
+    <div class="cta-bg" style="background-image: url('https://images.pexels.com/photos/358549/pexels-photo-358549.jpeg?auto=compress&cs=tinysrgb&w=1920');"></div>
+    <div class="cta-overlay"></div>
+    <div class="container cta-content reveal-scale">
+      <span class="eyebrow" style="color: var(--gold-400);">Get Started Today</span>
+      <h2>Your Case Deserves Expert Attention</h2>
+      <div class="divider-gold center"></div>
+      <p>
+        Schedule a confidential consultation with one of our senior attorneys.
+        We will review your situation, outline your options, and chart a path forward.
+      </p>
+      <div class="cta-actions">
+        <a href="error.html" class="btn btn-gold">Book a Consultation</a>
+        <a href="error.html" class="btn btn-outline-light">View All Services</a>
+      </div>
+
+      <div class="cta-newsletter">
+        <h4>Stay Informed on Legal Matters</h4>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-gold">Subscribe</button>
+        </form>
+        <p class="newsletter-msg" id="newsletterMsg"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-pattern"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.webp" alt="Stackly & Associates" class="nav-logo-img">
+          </a>
+          <p>Premier legal consulting firm with over 35 years of experience serving corporations, families, and individuals with integrity and excellence.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="practice-areas.html">Practice Areas</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="login.html">Client Login</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Practice Areas</h4>
+          <ul class="footer-links"><li><a href="practice-areas.html">Corporate Law</a></li><li><a href="practice-areas.html">Civil Litigation</a></li><li><a href="practice-areas.html">Family Law</a></li><li><a href="practice-areas.html">Intellectual Property</a></li><li><a href="practice-areas.html">Real Estate</a></li><li><a href="practice-areas.html">Criminal Defense</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <!-- Office -->
+           <div class="footer-contact-item">
+             <i class="fa-solid fa-location-dot"></i>
+             <span>
+               <strong>Office</strong>
+               420 Madison Avenue, 18th Floor<br>
+               New York, NY 10017
+             </span>
+           </div>
+           
+           <!-- Phone -->
+           <div class="footer-contact-item">
+             <i class="fa-solid fa-phone"></i>
+             <span>
+
+               <strong>Phone</strong>
+               +1 (212) 555-0190
+             </span>
+           </div>
+           
+           <!-- Email -->
+           <div class="footer-contact-item">
+             <i class="fa-solid fa-envelope"></i>
+             <span>
+               <strong>Email</strong>
+               consult@Stacklylaw.com
+             </span>
+           </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Stackly &amp; Associates. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Disclaimer</a></div></div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg>
+  </button>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard — Stackly & Associates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dash-body">
+
+  <!-- Sidebar -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <div class="dash-sidebar-header">
+      <a href="index.html" class="dash-sidebar-logo">
+        <div class="nav-logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25M12 3c-1.5 0-2.25 1-2.25 2.25S10.5 7.5 12 7.5M12 3c1.5 0 2.25 1 2.25 2.25S13.5 7.5 12 7.5M12 7.5v2.25M5.25 6.75L7.5 12M7.5 12L5.25 9.75M7.5 12H4.5M18.75 6.75L16.5 12M16.5 12l2.25-2.25M16.5 12h3M12 17.25L5 20.25M12 17.25l7 3"/></svg>
+        </div>
+        <div class="nav-logo-text-wrap">
+          <span class="nav-logo-text">Stackly</span>
+          <span class="nav-logo-sub">Client Portal</span>
+        </div>
+      </a>
+      <button class="dash-sidebar-close" id="sidebarClose" aria-label="Close sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="dash-sidebar-nav">
+      <a href="#" class="dash-nav-item active" data-module="overview">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V9.75"/></svg>
+        <span>Overview</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="cases">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.68.227-.815.525M3 4.5h.015M3 9h.015M3 13.5h.015M3 18h.015"/></svg>
+        <span>My Cases</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="documents">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+        <span>Documents</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="appointments">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0V12.75A2.25 2.25 0 015.25 10.5h13.5a2.25 2.25 0 012.25 2.25v5.25M7.5 15.75h.008v.008H7.5v-.008z"/></svg>
+        <span>Appointments</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="invoices">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>
+        <span>Invoices</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="messages">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+        <span>Messages</span>
+        <span class="dash-nav-badge">3</span>
+      </a>
+    </nav>
+
+    <div class="dash-sidebar-footer">
+      <div class="dash-sidebar-user">
+        <div class="dash-user-avatar">JD</div>
+        <div class="dash-user-info">
+          <span class="dash-user-name">John Doe</span>
+          <span class="dash-user-role">Client</span>
+        </div>
+      </div>
+      <a href="index.html" class="dash-logout-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"/></svg>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Mobile overlay -->
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <!-- Main content area -->
+  <div class="dash-main" id="dashMain">
+    <!-- Sticky Topbar -->
+    <header class="dash-topbar">
+      <button class="dash-toggle" id="dashToggle" aria-label="Toggle sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+      </button>
+      <div class="dash-topbar-title">
+        <h2 id="topbarTitle">Overview</h2>
+        <span id="topbarDate"></span>
+      </div>
+      <div class="dash-topbar-actions">
+        <button class="dash-topbar-icon-btn" aria-label="Notifications">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>
+          <span class="dash-topbar-badge">2</span>
+        </button>
+        <button class="dash-topbar-icon-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        </button>
+        <div class="dash-topbar-avatar">JD</div>
+      </div>
+    </header>
+
+    <!-- Content scroll area -->
+    <div class="dash-content">
+
+      <!-- ===== MODULE: OVERVIEW ===== -->
+      <section class="dash-module active" id="module-overview">
+        <!-- Stat cards -->
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(200,155,60,0.1); color: var(--gold-600);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.68.227-.815.525M3 4.5h.015M3 9h.015M3 13.5h.015M3 18h.015"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">3</span>
+              <span class="dash-stat-label">Active Cases</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(45,122,79,0.1); color: var(--success);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">12</span>
+              <span class="dash-stat-label">Documents</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(58,124,165,0.1); color: var(--info);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0V12.75A2.25 2.25 0 015.25 10.5h13.5a2.25 2.25 0 012.25 2.25v5.25"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">2</span>
+              <span class="dash-stat-label">Upcoming Meetings</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(192,65,60,0.1); color: var(--error);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">$4,250</span>
+              <span class="dash-stat-label">Outstanding Balance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Welcome banner -->
+        <div class="dash-welcome-banner">
+          <div class="dash-welcome-text">
+            <span class="eyebrow" style="color: var(--gold-400);">Welcome back</span>
+            <h2>Good day, John Doe</h2>
+            <p>You have 2 upcoming appointments and 3 unread messages from your legal team.</p>
+            <a href="#" class="btn btn-gold dash-welcome-btn" data-module-link="messages">View Messages</a>
+          </div>
+          <div class="dash-welcome-illustration">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25M12 3c-1.5 0-2.25 1-2.25 2.25S10.5 7.5 12 7.5M12 3c1.5 0 2.25 1 2.25 2.25S13.5 7.5 12 7.5M12 7.5v2.25M5.25 6.75L7.5 12M7.5 12L5.25 9.75M7.5 12H4.5M18.75 6.75L16.5 12M16.5 12l2.25-2.25M16.5 12h3M12 17.25L5 20.25M12 17.25l7 3"/></svg>
+          </div>
+        </div>
+
+        <!-- Recent activity + upcoming -->
+        <div class="dash-two-col">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Recent Activity</h3>
+              <a href="#" class="dash-card-link">View All</a>
+            </div>
+            <div class="dash-activity-list">
+              <div class="dash-activity-item">
+                <div class="dash-activity-dot" style="background: var(--gold-500);"></div>
+                <div class="dash-activity-content">
+                  <span class="dash-activity-title">Document uploaded: Contract_v3.pdf</span>
+                  <span class="dash-activity-time">2 hours ago</span>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <div class="dash-activity-dot" style="background: var(--info);"></div>
+                <div class="dash-activity-content">
+                  <span class="dash-activity-title">Appointment scheduled with J. Whitfield</span>
+                  <span class="dash-activity-time">1 day ago</span>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <div class="dash-activity-dot" style="background: var(--success);"></div>
+                <div class="dash-activity-content">
+                  <span class="dash-activity-title">Case update: Stackly v. Hendricks — Discovery phase</span>
+                  <span class="dash-activity-time">3 days ago</span>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <div class="dash-activity-dot" style="background: var(--error);"></div>
+                <div class="dash-activity-content">
+                  <span class="dash-activity-title">Invoice #INV-2026-0042 is due in 5 days</span>
+                  <span class="dash-activity-time">5 days ago</span>
+                </div>
+              </div>
+              <div class="dash-activity-item">
+                <div class="dash-activity-dot" style="background: var(--gold-500);"></div>
+                <div class="dash-activity-content">
+                  <span class="dash-activity-title">Message received from V. Ashworth</span>
+                  <span class="dash-activity-time">1 week ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Upcoming Appointments</h3>
+              <a href="#" class="dash-card-link" data-module-link="appointments">View All</a>
+            </div>
+            <div class="dash-appointment-list">
+              <div class="dash-appointment-item">
+                <div class="dash-appointment-date">
+                  <span class="dash-appt-day">28</span>
+                  <span class="dash-appt-month">OCT</span>
+                </div>
+                <div class="dash-appointment-info">
+                  <span class="dash-appt-title">Case Review Meeting</span>
+                  <span class="dash-appt-detail">With J. Whitfield · 10:00 AM</span>
+                </div>
+                <span class="dash-appt-status upcoming">Upcoming</span>
+              </div>
+              <div class="dash-appointment-item">
+                <div class="dash-appointment-date">
+                  <span class="dash-appt-day">02</span>
+                  <span class="dash-appt-month">NOV</span>
+                </div>
+                <div class="dash-appointment-info">
+                  <span class="dash-appt-title">Document Signing</span>
+                  <span class="dash-appt-detail">With V. Ashworth · 2:30 PM</span>
+                </div>
+                <span class="dash-appt-status upcoming">Upcoming</span>
+              </div>
+              <div class="dash-appointment-item">
+                <div class="dash-appointment-date">
+                  <span class="dash-appt-day">15</span>
+                  <span class="dash-appt-month">OCT</span>
+                </div>
+                <div class="dash-appointment-info">
+                  <span class="dash-appt-title">Initial Consultation</span>
+                  <span class="dash-appt-detail">With D. Chen · 9:00 AM</span>
+                </div>
+                <span class="dash-appt-status completed">Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="dash-quick-actions">
+            <a href="#" class="dash-quick-action" data-module-link="documents">
+              <div class="dash-qa-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg></div>
+              <span>Upload Document</span>
+            </a>
+            <a href="#" class="dash-quick-action" data-module-link="appointments">
+              <div class="dash-qa-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25"/></svg></div>
+              <span>Book Appointment</span>
+            </a>
+            <a href="#" class="dash-quick-action" data-module-link="messages">
+              <div class="dash-qa-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75"/></svg></div>
+              <span>Send Message</span>
+            </a>
+            <a href="#" class="dash-quick-action" data-module-link="invoices">
+              <div class="dash-qa-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg></div>
+              <span>Pay Invoice</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: CASES ===== -->
+      <section class="dash-module" id="module-cases">
+        <div class="dash-module-header">
+          <h3>My Cases</h3>
+          <p>Track the progress of all your active and past legal cases.</p>
+        </div>
+
+        <div class="dash-cases-grid">
+          <div class="dash-case-card">
+            <div class="dash-case-top">
+              <span class="dash-case-tag active">Active</span>
+              <span class="dash-case-num">#C-2026-0142</span>
+            </div>
+            <h4>Stackly v. Hendricks Corp.</h4>
+            <p class="dash-case-desc">Breach of contract dispute regarding software delivery terms.</p>
+            <div class="dash-case-meta">
+              <div class="dash-case-meta-item"><span>Attorney</span><strong>J. Whitfield</strong></div>
+              <div class="dash-case-meta-item"><span>Filed</span><strong>Jan 15, 2026</strong></div>
+              <div class="dash-case-meta-item"><span>Next Date</span><strong>Nov 5, 2026</strong></div>
+            </div>
+            <div class="dash-case-progress">
+              <div class="dash-case-progress-top"><span>Discovery Phase</span><span>65%</span></div>
+              <div class="dash-case-progress-bar"><div class="dash-case-progress-fill" style="width: 65%"></div></div>
+            </div>
+            <div class="dash-case-timeline-mini">
+              <div class="dash-ctm-item done">Filed</div>
+              <div class="dash-ctm-item done">Initial Hearing</div>
+              <div class="dash-ctm-item current">Discovery</div>
+              <div class="dash-ctm-item">Trial</div>
+            </div>
+          </div>
+
+          <div class="dash-case-card">
+            <div class="dash-case-top">
+              <span class="dash-case-tag active">Active</span>
+              <span class="dash-case-num">#C-2026-0098</span>
+            </div>
+            <h4>Estate Planning — Doe Family Trust</h4>
+            <p class="dash-case-desc">Establishment of family trust and estate planning documents.</p>
+            <div class="dash-case-meta">
+              <div class="dash-case-meta-item"><span>Attorney</span><strong>V. Ashworth</strong></div>
+              <div class="dash-case-meta-item"><span>Opened</span><strong>Mar 3, 2026</strong></div>
+              <div class="dash-case-meta-item"><span>Next Date</span><strong>Oct 28, 2026</strong></div>
+            </div>
+            <div class="dash-case-progress">
+              <div class="dash-case-progress-top"><span>Document Drafting</span><span>80%</span></div>
+              <div class="dash-case-progress-bar"><div class="dash-case-progress-fill" style="width: 80%"></div></div>
+            </div>
+            <div class="dash-case-timeline-mini">
+              <div class="dash-ctm-item done">Consultation</div>
+              <div class="dash-ctm-item done">Planning</div>
+              <div class="dash-ctm-item current">Drafting</div>
+              <div class="dash-ctm-item">Signing</div>
+            </div>
+          </div>
+
+          <div class="dash-case-card">
+            <div class="dash-case-top">
+              <span class="dash-case-tag pending">Pending</span>
+              <span class="dash-case-num">#C-2026-0211</span>
+            </div>
+            <h4>Patent Application — TechNova</h4>
+            <p class="dash-case-desc">USPTO patent filing for a new software algorithm.</p>
+            <div class="dash-case-meta">
+              <div class="dash-case-meta-item"><span>Attorney</span><strong>D. Chen</strong></div>
+              <div class="dash-case-meta-item"><span>Filed</span><strong>Sep 20, 2026</strong></div>
+              <div class="dash-case-meta-item"><span>Next Date</span><strong>TBD</strong></div>
+            </div>
+            <div class="dash-case-progress">
+              <div class="dash-case-progress-top"><span>USPTO Review</span><span>30%</span></div>
+              <div class="dash-case-progress-bar"><div class="dash-case-progress-fill" style="width: 30%"></div></div>
+            </div>
+            <div class="dash-case-timeline-mini">
+              <div class="dash-ctm-item done">Filed</div>
+              <div class="dash-ctm-item current">USPTO Review</div>
+              <div class="dash-ctm-item">Office Action</div>
+              <div class="dash-ctm-item">Grant</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>Case History</h3>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr><th>Case #</th><th>Title</th><th>Attorney</th><th>Status</th><th>Date</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>#C-2025-0087</td><td>Property Dispute — Madison LLC</td><td>S. Martinez</td><td><span class="dash-status completed">Won</span></td><td>Dec 2025</td></tr>
+                <tr><td>#C-2025-0034</td><td>Contract Review — TechNova Inc.</td><td>J. Whitfield</td><td><span class="dash-status completed">Closed</span></td><td>Aug 2025</td></tr>
+                <tr><td>#C-2024-0156</td><td>Custody Modification</td><td>V. Ashworth</td><td><span class="dash-status completed">Resolved</span></td><td>Nov 2024</td></tr>
+                <tr><td>#C-2024-0078</td><td>Trademark Registration</td><td>D. Chen</td><td><span class="dash-status completed">Granted</span></td><td>Jul 2024</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: DOCUMENTS ===== -->
+      <section class="dash-module" id="module-documents">
+        <div class="dash-module-header">
+          <h3>My Documents</h3>
+          <p>Access, download, and upload legal documents related to your cases.</p>
+        </div>
+
+        <div class="dash-upload-zone" id="uploadZone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/></svg>
+          <h4>Drag &amp; drop files here or click to browse</h4>
+          <p>Supported formats: PDF, DOC, DOCX, JPG, PNG (max 10MB)</p>
+          <input type="file" id="fileInput" multiple style="display:none;">
+        </div>
+
+        <div class="dash-doc-filters">
+          <button class="dash-doc-filter active" data-doc-filter="all">All</button>
+          <button class="dash-doc-filter" data-doc-filter="contract">Contracts</button>
+          <button class="dash-doc-filter" data-doc-filter="court">Court Filings</button>
+          <button class="dash-doc-filter" data-doc-filter="evidence">Evidence</button>
+          <button class="dash-doc-filter" data-doc-filter="other">Other</button>
+        </div>
+
+        <div class="dash-doc-grid">
+          <div class="dash-doc-card" data-doc-type="contract">
+            <div class="dash-doc-icon pdf"><span>PDF</span></div>
+            <div class="dash-doc-info">
+              <h4>Contract_v3.pdf</h4>
+              <span>248 KB · Uploaded Oct 12</span>
+            </div>
+            <button class="dash-doc-action" aria-label="Download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></button>
+          </div>
+          <div class="dash-doc-card" data-doc-type="court">
+            <div class="dash-doc-icon pdf"><span>PDF</span></div>
+            <div class="dash-doc-info">
+              <h4>Discovery_Motion.pdf</h4>
+              <span>512 KB · Uploaded Oct 8</span>
+            </div>
+            <button class="dash-doc-action" aria-label="Download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></button>
+          </div>
+          <div class="dash-doc-card" data-doc-type="contract">
+            <div class="dash-doc-icon doc"><span>DOC</span></div>
+            <div class="dash-doc-info">
+              <h4>Settlement_Draft.docx</h4>
+              <span>186 KB · Uploaded Oct 5</span>
+            </div>
+            <button class="dash-doc-action" aria-label="Download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></button>
+          </div>
+          <div class="dash-doc-card" data-doc-type="evidence">
+            <div class="dash-doc-icon img"><span>JPG</span></div>
+            <div class="dash-doc-info">
+              <h4>Evidence_Photo_01.jpg</h4>
+              <span>1.2 MB · Uploaded Sep 28</span>
+            </div>
+            <button class="dash-doc-action" aria-label="Download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></button>
+          </div>
+          <div class="dash-doc-card" data-doc-type="court">
+            <div class="dash-doc-icon pdf"><span>PDF</span></div>
+            <div class="dash-doc-info">
+              <h4>Court_Filing_Reply.pdf</h4>
+              <span>340 KB · Uploaded Sep 22</span>
+            </div>
+            <button class="dash-doc-action" aria-label="Download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></button>
+          </div>
+          <div class="dash-doc-card" data-doc-type="other">
+            <div class="dash-doc-icon doc"><span>DOC</span></div>
+            <div class="dash-doc-info">
+              <h4>Trust_Agreement_v2.docx</h4>
+              <span>224 KB · Uploaded Sep 15</span>
+            </div>
+            <button class="dash-doc-action" aria-label="Download"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: APPOINTMENTS ===== -->
+      <section class="dash-module" id="module-appointments">
+        <div class="dash-module-header">
+          <h3>Appointments</h3>
+          <p>View and manage your upcoming and past appointments with our attorneys.</p>
+        </div>
+
+        <div class="dash-appt-calendar">
+          <div class="dash-cal-header">
+            <button class="dash-cal-nav" id="calPrev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg></button>
+            <h4 id="calMonthLabel">October 2026</h4>
+            <button class="dash-cal-nav" id="calNext"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
+          </div>
+          <div class="dash-cal-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="dash-cal-days" id="calDays"></div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header"><h3>All Appointments</h3></div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Date</th><th>Time</th><th>Title</th><th>Attorney</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Oct 28, 2026</td><td>10:00 AM</td><td>Case Review Meeting</td><td>J. Whitfield</td><td><span class="dash-status upcoming">Upcoming</span></td></tr>
+                <tr><td>Nov 2, 2026</td><td>2:30 PM</td><td>Document Signing</td><td>V. Ashworth</td><td><span class="dash-status upcoming">Upcoming</span></td></tr>
+                <tr><td>Oct 15, 2026</td><td>9:00 AM</td><td>Initial Consultation</td><td>D. Chen</td><td><span class="dash-status completed">Completed</span></td></tr>
+                <tr><td>Sep 28, 2026</td><td>11:00 AM</td><td>Patent Strategy</td><td>D. Chen</td><td><span class="dash-status completed">Completed</span></td></tr>
+                <tr><td>Sep 10, 2026</td><td>3:00 PM</td><td>Case Strategy Session</td><td>J. Whitfield</td><td><span class="dash-status completed">Completed</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-gold dash-book-btn">Request New Appointment</a>
+      </section>
+
+      <!-- ===== MODULE: INVOICES ===== -->
+      <section class="dash-module" id="module-invoices">
+        <div class="dash-module-header">
+          <h3>Invoices &amp; Billing</h3>
+          <p>View, pay, and download your invoices from Stackly &amp; Associates.</p>
+        </div>
+
+        <div class="dash-billing-summary">
+          <div class="dash-bill-card">
+            <span class="dash-bill-label">Total Outstanding</span>
+            <span class="dash-bill-amount">$4,250</span>
+            <a href="#" class="btn btn-gold dash-bill-pay">Pay Now</a>
+          </div>
+          <div class="dash-bill-card">
+            <span class="dash-bill-label">Paid This Year</span>
+            <span class="dash-bill-amount">$18,500</span>
+            <span class="dash-bill-sub">8 invoices settled</span>
+          </div>
+          <div class="dash-bill-card">
+            <span class="dash-bill-label">Next Due Date</span>
+            <span class="dash-bill-amount">Oct 26</span>
+            <span class="dash-bill-sub">Invoice #INV-2026-0042</span>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header"><h3>Invoice History</h3></div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Invoice #</th><th>Description</th><th>Amount</th><th>Date</th><th>Status</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>INV-2026-0042</td><td>Discovery phase — Case #C-2026-0142</td><td>$4,250</td><td>Oct 12</td><td><span class="dash-status pending">Due</span></td><td><button class="dash-mini-btn pay">Pay</button></td></tr>
+                <tr><td>INV-2026-0038</td><td>Trust drafting — Case #C-2026-0098</td><td>$3,200</td><td>Sep 28</td><td><span class="dash-status completed">Paid</span></td><td><button class="dash-mini-btn download">Download</button></td></tr>
+                <tr><td>INV-2026-0031</td><td>Patent filing fees — Case #C-2026-0211</td><td>$2,800</td><td>Sep 20</td><td><span class="dash-status completed">Paid</span></td><td><button class="dash-mini-btn download">Download</button></td></tr>
+                <tr><td>INV-2026-0025</td><td>Consultation &amp; strategy</td><td>$1,500</td><td>Aug 15</td><td><span class="dash-status completed">Paid</span></td><td><button class="dash-mini-btn download">Download</button></td></tr>
+                <tr><td>INV-2026-0018</td><td>Contract review — TechNova</td><td>$2,200</td><td>Jul 10</td><td><span class="dash-status completed">Paid</span></td><td><button class="dash-mini-btn download">Download</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header"><h3>Payment Methods</h3></div>
+          <div class="dash-pay-methods">
+            <div class="dash-pay-method active">
+              <div class="dash-pm-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg></div>
+              <div class="dash-pm-info"><strong>Visa ending 4521</strong><span>Expires 08/2028</span></div>
+              <span class="dash-pm-default">Default</span>
+            </div>
+            <button class="dash-pay-add"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg> Add Payment Method</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: MESSAGES ===== -->
+      <section class="dash-module" id="module-messages">
+        <div class="dash-module-header">
+          <h3>Messages</h3>
+          <p>Secure communication with your legal team at Stackly &amp; Associates.</p>
+        </div>
+
+        <div class="dash-msg-layout">
+          <div class="dash-msg-sidebar">
+            <button class="dash-msg-compose">Compose New Message</button>
+            <div class="dash-msg-conv-list">
+              <div class="dash-msg-conv active" data-conv="0">
+                <div class="dash-msg-conv-avatar" style="background: var(--navy-700);">JW</div>
+                <div class="dash-msg-conv-info">
+                  <span class="dash-msg-conv-name">James Whitfield</span>
+                  <span class="dash-msg-conv-preview">The discovery documents are ready...</span>
+                </div>
+                <span class="dash-msg-conv-badge">2</span>
+              </div>
+              <div class="dash-msg-conv" data-conv="1">
+                <div class="dash-msg-conv-avatar" style="background: var(--gold-600);">VA</div>
+                <div class="dash-msg-conv-info">
+                  <span class="dash-msg-conv-name">Victoria Ashworth</span>
+                  <span class="dash-msg-conv-preview">Your trust documents need your signature...</span>
+                </div>
+                <span class="dash-msg-conv-badge">1</span>
+              </div>
+              <div class="dash-msg-conv" data-conv="2">
+                <div class="dash-msg-conv-avatar" style="background: var(--info);">DC</div>
+                <div class="dash-msg-conv-info">
+                  <span class="dash-msg-conv-name">David Chen</span>
+                  <span class="dash-msg-conv-preview">USPTO has acknowledged your filing...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-msg-main">
+            <div class="dash-msg-header">
+              <div class="dash-msg-peer">
+                <div class="dash-msg-peer-avatar" style="background: var(--navy-700);">JW</div>
+                <div><strong>James Whitfield</strong><span>Senior Partner — Corporate Law</span></div>
+              </div>
+            </div>
+            <div class="dash-msg-thread" id="msgThread">
+              <div class="dash-msg-bubble received">
+                <p>Good morning John, I wanted to let you know that the discovery documents for your case (#C-2026-0142) are now ready for your review.</p>
+                <span class="dash-msg-time">Oct 14, 9:32 AM</span>
+              </div>
+              <div class="dash-msg-bubble sent">
+                <p>Thank you, James. I'll review them this afternoon. Are there any specific sections I should focus on?</p>
+                <span class="dash-msg-time">Oct 14, 10:15 AM</span>
+              </div>
+              <div class="dash-msg-bubble received">
+                <p>Yes, please pay special attention to Section 3 — the email correspondence between the parties. It's critical to our argument.</p>
+                <span class="dash-msg-time">Oct 14, 10:28 AM</span>
+              </div>
+            </div>
+            <div class="dash-msg-input-area">
+              <input type="text" id="msgInput" placeholder="Type your message...">
+              <button id="msgSend" class="btn btn-gold dash-msg-send">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/dashboard-client.js"></script>
+</body>
+</html>

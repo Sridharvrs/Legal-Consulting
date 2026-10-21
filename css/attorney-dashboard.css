@@ -1,0 +1,407 @@
+/* ========================================
+   ATTORNEY DASHBOARD — UNIQUE STYLES
+   Attorney-specific modules: schedule, billing,
+   caseload, clients, deadlines
+   ======================================== */
+
+/* ===== ATTORNEY SCHEDULE LIST ===== */
+.dash-att-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash-att-sched-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--gray-100);
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--gold-500);
+  transition: all var(--t-fast);
+}
+
+.dash-att-sched-item:hover {
+  background: var(--cream);
+  transform: translateX(4px);
+}
+
+.dash-att-sched-time {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--navy-800);
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.dash-att-sched-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dash-att-sched-info strong {
+  font-size: 0.88rem;
+  color: var(--navy-900);
+}
+
+.dash-att-sched-info span {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+/* ===== ATTENTION LIST ===== */
+.dash-att-attention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash-att-attention-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--gray-100);
+  border-radius: var(--r-sm);
+  transition: all var(--t-fast);
+}
+
+.dash-att-attention-item:hover {
+  background: var(--cream);
+  transform: translateX(4px);
+}
+
+.dash-att-att-priority {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.dash-att-att-priority.high {
+  background: rgba(192, 65, 60, 0.15);
+  color: var(--error);
+}
+
+.dash-att-att-priority.medium {
+  background: rgba(200, 155, 60, 0.15);
+  color: var(--gold-700);
+}
+
+.dash-att-att-priority.low {
+  background: rgba(45, 122, 79, 0.15);
+  color: var(--success);
+}
+
+.dash-att-att-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dash-att-att-info strong {
+  font-size: 0.88rem;
+  color: var(--navy-900);
+}
+
+.dash-att-att-info span {
+  font-size: 0.78rem;
+  color: var(--gray-400);
+}
+
+/* ===== BILLABLE HOURS CHART ===== */
+.dash-att-hours-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dash-att-hours-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-att-hours-day {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy-800);
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.dash-att-hours-track {
+  flex: 1;
+  height: 24px;
+  background: var(--gray-100);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+}
+
+.dash-att-hours-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-600), var(--gold-400));
+  border-radius: var(--r-sm);
+  transition: width 1s ease;
+  display: flex;
+  align-items: center;
+}
+
+.dash-att-hours-val {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold-700);
+  width: 50px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ===== CASE FILTERS ===== */
+.dash-att-case-filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+/* ===== PRIORITY BADGE ===== */
+.dash-priority {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dash-priority.high { background: rgba(192,65,60,0.15); color: var(--error); }
+.dash-priority.medium { background: rgba(200,155,60,0.15); color: var(--gold-700); }
+.dash-priority.low { background: rgba(45,122,79,0.15); color: var(--success); }
+
+/* ===== MINI PROGRESS ===== */
+.dash-mini-progress {
+  width: 80px;
+  height: 6px;
+  background: var(--gray-200);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+
+.dash-mini-progress > div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-600), var(--gold-400));
+  border-radius: var(--r-full);
+  transition: width 1s ease;
+}
+
+/* ===== DEADLINES ===== */
+.dash-att-deadlines {
+  margin-top: var(--sp-2);
+}
+
+.dash-att-deadline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash-att-deadline-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--gray-100);
+  border-radius: var(--r-sm);
+  border-left: 3px solid var(--gold-500);
+  transition: all var(--t-fast);
+}
+
+.dash-att-deadline-item.urgent {
+  border-left-color: var(--error);
+  background: rgba(192, 65, 60, 0.05);
+}
+
+.dash-att-deadline-item:hover {
+  transform: translateX(4px);
+}
+
+.dash-att-dl-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: var(--navy-800);
+  border-radius: var(--r-sm);
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.dash-att-dl-date span:first-child {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--gold-400);
+  line-height: 1;
+}
+
+.dash-att-dl-date span:last-child {
+  font-size: 0.58rem;
+  color: var(--gray-300);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.dash-att-dl-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dash-att-dl-info strong {
+  font-size: 0.88rem;
+  color: var(--navy-900);
+}
+
+.dash-att-dl-info span {
+  font-size: 0.78rem;
+  color: var(--gray-400);
+}
+
+/* ===== CLIENT CARDS ===== */
+.dash-att-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+.dash-att-client-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+  text-align: center;
+  transition: all var(--t-elegant);
+  border-top: 3px solid var(--gold-500);
+}
+
+.dash-att-client-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.dash-att-client-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 auto var(--sp-1);
+}
+
+.dash-att-client-info h4 {
+  font-size: 1rem;
+  color: var(--navy-900);
+  margin-bottom: 2px;
+}
+
+.dash-att-client-info > span {
+  font-size: 0.72rem;
+  color: var(--gold-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.dash-att-client-info p {
+  font-size: 0.82rem;
+  color: var(--gray-400);
+  margin-bottom: var(--sp-1);
+}
+
+.dash-att-client-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.dash-att-client-actions .dash-mini-btn {
+  font-size: 0.68rem;
+  padding: 5px 12px;
+}
+
+/* ===== REVENUE LIST ===== */
+.dash-att-revenue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dash-att-revenue-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-att-rev-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy-800);
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.dash-att-revenue-item .dash-mini-progress {
+  flex: 1;
+  width: auto;
+}
+
+.dash-att-rev-amt {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold-700);
+  width: 55px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ===== TIMER BUTTON ===== */
+.dash-timer-btn {
+  font-size: 0.78rem;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dash-timer-btn svg { width: 16px; height: 16px; }
+
+.dash-timer-btn.active {
+  background: var(--error);
+  color: var(--white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .dash-att-clients-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .dash-att-clients-grid { grid-template-columns: 1fr; }
+  .dash-att-sched-time { width: 60px; font-size: 0.72rem; }
+}

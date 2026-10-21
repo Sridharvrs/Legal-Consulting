@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attorney Dashboard — Stackly & Associates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/attorney-dashboard.css">
+</head>
+<body class="dash-body">
+
+  <!-- Sidebar -->
+  <aside class="dash-sidebar" id="dashSidebar">
+    <div class="dash-sidebar-header">
+      <a href="index.html" class="dash-sidebar-logo">
+        <div class="nav-logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25M12 3c-1.5 0-2.25 1-2.25 2.25S10.5 7.5 12 7.5M12 3c1.5 0 2.25 1 2.25 2.25S13.5 7.5 12 7.5M12 7.5v2.25M5.25 6.75L7.5 12M7.5 12L5.25 9.75M7.5 12H4.5M18.75 6.75L16.5 12M16.5 12l2.25-2.25M16.5 12h3M12 17.25L5 20.25M12 17.25l7 3"/></svg>
+        </div>
+        <div class="nav-logo-text-wrap">
+          <span class="nav-logo-text">Stackly</span>
+          <span class="nav-logo-sub">Attorney Portal</span>
+        </div>
+      </a>
+      <button class="dash-sidebar-close" id="sidebarClose" aria-label="Close sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="dash-sidebar-nav">
+      <a href="#" class="dash-nav-item active" data-module="overview">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V9.75"/></svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="caseload">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.68.227-.815.525M3 4.5h.015M3 9h.015M3 13.5h.015M3 18h.015"/></svg>
+        <span>Caseload</span>
+        <span class="dash-nav-badge">12</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="clients">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Clients</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="schedule">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0V12.75A2.25 2.25 0 015.25 10.5h13.5a2.25 2.25 0 012.25 2.25v5.25"/></svg>
+        <span>Schedule</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="billing">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125V21M3 7.5h18M3 12h18M3 17.25h18"/></svg>
+        <span>Time &amp; Billing</span>
+      </a>
+      <a href="#" class="dash-nav-item" data-module="messages">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+        <span>Messages</span>
+        <span class="dash-nav-badge">5</span>
+      </a>
+    </nav>
+
+    <div class="dash-sidebar-footer">
+      <div class="dash-sidebar-user">
+        <div class="dash-user-avatar">JW</div>
+        <div class="dash-user-info">
+          <span class="dash-user-name">James Whitfield</span>
+          <span class="dash-user-role">Senior Partner</span>
+        </div>
+      </div>
+      <a href="index.html" class="dash-logout-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"/></svg>
+        <span>Logout</span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <div class="dash-main" id="dashMain">
+    <header class="dash-topbar">
+      <button class="dash-toggle" id="dashToggle" aria-label="Toggle sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+      </button>
+      <div class="dash-topbar-title">
+        <h2 id="topbarTitle">Dashboard</h2>
+        <span id="topbarDate"></span>
+      </div>
+      <div class="dash-topbar-actions">
+        <button class="dash-topbar-icon-btn" aria-label="Notifications">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>
+          <span class="dash-topbar-badge">5</span>
+        </button>
+        <button class="dash-topbar-icon-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        </button>
+        <div class="dash-topbar-avatar">JW</div>
+      </div>
+    </header>
+
+    <div class="dash-content">
+
+      <!-- ===== MODULE: OVERVIEW ===== -->
+      <section class="dash-module active" id="module-overview">
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(200,155,60,0.1); color: var(--gold-600);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.68.227-.815.525"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">12</span>
+              <span class="dash-stat-label">Active Cases</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(45,122,79,0.1); color: var(--success);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">28</span>
+              <span class="dash-stat-label">Total Clients</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(58,124,165,0.1); color: var(--info);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">24.5</span>
+              <span class="dash-stat-label">Billable Hours (Week)</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon" style="background: rgba(200,155,60,0.1); color: var(--gold-600);">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25"/></svg>
+            </div>
+            <div class="dash-stat-info">
+              <span class="dash-stat-num">$52.8k</span>
+              <span class="dash-stat-label">Revenue (Month)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-welcome-banner">
+          <div class="dash-welcome-text">
+            <span class="eyebrow" style="color: var(--gold-400);">Attorney Dashboard</span>
+            <h2>Welcome, James Whitfield</h2>
+            <p>You have 3 court dates this week, 5 unread client messages, and 2 cases awaiting your review.</p>
+            <a href="#" class="btn btn-gold dash-welcome-btn" data-module-link="caseload">View Caseload</a>
+          </div>
+          <div class="dash-welcome-illustration">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25M12 3c-1.5 0-2.25 1-2.25 2.25S10.5 7.5 12 7.5M12 3c1.5 0 2.25 1 2.25 2.25S13.5 7.5 12 7.5M12 7.5v2.25M5.25 6.75L7.5 12M7.5 12L5.25 9.75M7.5 12H4.5M18.75 6.75L16.5 12M16.5 12l2.25-2.25M16.5 12h3M12 17.25L5 20.25M12 17.25l7 3"/></svg>
+          </div>
+        </div>
+
+        <div class="dash-two-col">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Today's Schedule</h3>
+              <a href="#" class="dash-card-link" data-module-link="schedule">Full Calendar</a>
+            </div>
+            <div class="dash-att-schedule-list">
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">9:00 AM</span>
+                <div class="dash-att-sched-info">
+                  <strong>Client Meeting — John Doe</strong>
+                  <span>Case #C-2026-0142 · Conference Room A</span>
+                </div>
+                <span class="dash-appt-status upcoming">Now</span>
+              </div>
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">11:30 AM</span>
+                <div class="dash-att-sched-info">
+                  <strong>Court Hearing — Stackly v. Hendricks</strong>
+                  <span>Supreme Court, Room 304</span>
+                </div>
+                <span class="dash-appt-status upcoming">In 2h</span>
+              </div>
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">2:00 PM</span>
+                <div class="dash-att-sched-info">
+                  <strong>Deposition — Witness Interview</strong>
+                  <span>Case #C-2026-0098 · Office</span>
+                </div>
+                <span class="dash-appt-status upcoming">Later</span>
+              </div>
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">4:30 PM</span>
+                <div class="dash-att-sched-info">
+                  <strong>Internal Strategy Meeting</strong>
+                  <span>Partners Conference Room</span>
+                </div>
+                <span class="dash-appt-status upcoming">Later</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3>Cases Needing Attention</h3>
+              <a href="#" class="dash-card-link" data-module-link="caseload">All Cases</a>
+            </div>
+            <div class="dash-att-attention-list">
+              <div class="dash-att-attention-item">
+                <div class="dash-att-att-priority high">High</div>
+                <div class="dash-att-att-info">
+                  <strong>Stackly v. Hendricks Corp.</strong>
+                  <span>Discovery response due in 2 days</span>
+                </div>
+              </div>
+              <div class="dash-att-attention-item">
+                <div class="dash-att-att-priority high">High</div>
+                <div class="dash-att-att-info">
+                  <strong>Estate Planning — Doe Family Trust</strong>
+                  <span>Awaiting client signature on trust docs</span>
+                </div>
+              </div>
+              <div class="dash-att-attention-item">
+                <div class="dash-att-att-priority medium">Med</div>
+                <div class="dash-att-att-info">
+                  <strong>Patent Application — TechNova</strong>
+                  <span>USPTO office action expected next week</span>
+                </div>
+              </div>
+              <div class="dash-att-attention-item">
+                <div class="dash-att-att-priority medium">Med</div>
+                <div class="dash-att-att-info">
+                  <strong>Property Dispute — Madison LLC</strong>
+                  <span>Settlement negotiation in progress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header"><h3>Billable Hours — This Week</h3></div>
+          <div class="dash-att-hours-chart">
+            <div class="dash-att-hours-bar">
+              <span class="dash-att-hours-day">Mon</span>
+              <div class="dash-att-hours-track"><div class="dash-att-hours-fill" style="width: 85%"></div></div>
+              <span class="dash-att-hours-val">6.8h</span>
+            </div>
+            <div class="dash-att-hours-bar">
+              <span class="dash-att-hours-day">Tue</span>
+              <div class="dash-att-hours-track"><div class="dash-att-hours-fill" style="width: 65%"></div></div>
+              <span class="dash-att-hours-val">5.2h</span>
+            </div>
+            <div class="dash-att-hours-bar">
+              <span class="dash-att-hours-day">Wed</span>
+              <div class="dash-att-hours-track"><div class="dash-att-hours-fill" style="width: 95%"></div></div>
+              <span class="dash-att-hours-val">7.6h</span>
+            </div>
+            <div class="dash-att-hours-bar">
+              <span class="dash-att-hours-day">Thu</span>
+              <div class="dash-att-hours-track"><div class="dash-att-hours-fill" style="width: 50%"></div></div>
+              <span class="dash-att-hours-val">4.0h</span>
+            </div>
+            <div class="dash-att-hours-bar">
+              <span class="dash-att-hours-day">Fri</span>
+              <div class="dash-att-hours-track"><div class="dash-att-hours-fill" style="width: 15%"></div></div>
+              <span class="dash-att-hours-val">0.9h</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: CASELOAD ===== -->
+      <section class="dash-module" id="module-caseload">
+        <div class="dash-module-header">
+          <h3>Caseload Management</h3>
+          <p>Manage all your active cases, track deadlines, and update case statuses.</p>
+        </div>
+
+        <div class="dash-att-case-filters">
+          <button class="dash-doc-filter active" data-case-filter="all">All (12)</button>
+          <button class="dash-doc-filter" data-case-filter="active">Active (8)</button>
+          <button class="dash-doc-filter" data-case-filter="pending">Pending (3)</button>
+          <button class="dash-doc-filter" data-case-filter="urgent">Urgent (1)</button>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Case #</th><th>Case Name</th><th>Client</th><th>Priority</th><th>Status</th><th>Next Deadline</th><th>Progress</th></tr></thead>
+              <tbody>
+                <tr data-case-status="urgent">
+                  <td>#C-2026-0142</td><td>Stackly v. Hendricks Corp.</td><td>John Doe</td>
+                  <td><span class="dash-priority high">High</span></td>
+                  <td><span class="dash-status pending">Discovery</span></td>
+                  <td>Oct 23</td>
+                  <td><div class="dash-mini-progress"><div style="width:65%"></div></div></td>
+                </tr>
+                <tr data-case-status="active">
+                  <td>#C-2026-0098</td><td>Estate Planning — Doe Trust</td><td>John Doe</td>
+                  <td><span class="dash-priority high">High</span></td>
+                  <td><span class="dash-status pending">Drafting</span></td>
+                  <td>Oct 28</td>
+                  <td><div class="dash-mini-progress"><div style="width:80%"></div></div></td>
+                </tr>
+                <tr data-case-status="pending">
+                  <td>#C-2026-0211</td><td>Patent Application — TechNova</td><td>David Chen</td>
+                  <td><span class="dash-priority medium">Med</span></td>
+                  <td><span class="dash-status pending">USPTO Review</span></td>
+                  <td>TBD</td>
+                  <td><div class="dash-mini-progress"><div style="width:30%"></div></div></td>
+                </tr>
+                <tr data-case-status="active">
+                  <td>#C-2026-0188</td><td>Property Dispute — Madison LLC</td><td>Sarah Madison</td>
+                  <td><span class="dash-priority medium">Med</span></td>
+                  <td><span class="dash-status pending">Negotiation</span></td>
+                  <td>Nov 2</td>
+                  <td><div class="dash-mini-progress"><div style="width:55%"></div></div></td>
+                </tr>
+                <tr data-case-status="active">
+                  <td>#C-2026-0175</td><td>Contract Review — Apex Industries</td><td>Mark Hull</td>
+                  <td><span class="dash-priority low">Low</span></td>
+                  <td><span class="dash-status pending">Review</span></td>
+                  <td>Nov 10</td>
+                  <td><div class="dash-mini-progress"><div style="width:40%"></div></div></td>
+                </tr>
+                <tr data-case-status="active">
+                  <td>#C-2026-0162</td><td>M&A Transaction — BlueTech</td><td>Linda Park</td>
+                  <td><span class="dash-priority high">High</span></td>
+                  <td><span class="dash-status pending">Due Diligence</span></td>
+                  <td>Oct 30</td>
+                  <td><div class="dash-mini-progress"><div style="width:45%"></div></div></td>
+                </tr>
+                <tr data-case-status="pending">
+                  <td>#C-2026-0155</td><td>Trademark Filing — GreenLeaf</td><td>Eric Green</td>
+                  <td><span class="dash-priority low">Low</span></td>
+                  <td><span class="dash-status pending">Filing</span></td>
+                  <td>Nov 5</td>
+                  <td><div class="dash-mini-progress"><div style="width:20%"></div></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dash-att-deadlines">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Upcoming Deadlines</h3></div>
+            <div class="dash-att-deadline-list">
+              <div class="dash-att-deadline-item urgent">
+                <div class="dash-att-dl-date"><span>23</span><span>OCT</span></div>
+                <div class="dash-att-dl-info"><strong>Discovery Response</strong><span>Case #C-2026-0142 — 2 days remaining</span></div>
+              </div>
+              <div class="dash-att-deadline-item">
+                <div class="dash-att-dl-date"><span>28</span><span>OCT</span></div>
+                <div class="dash-att-dl-info"><strong>Trust Document Signing</strong><span>Case #C-2026-0098 — 7 days remaining</span></div>
+              </div>
+              <div class="dash-att-deadline-item">
+                <div class="dash-att-dl-date"><span>30</span><span>OCT</span></div>
+                <div class="dash-att-dl-info"><strong>Due Diligence Report</strong><span>Case #C-2026-0162 — 9 days remaining</span></div>
+              </div>
+              <div class="dash-att-deadline-item">
+                <div class="dash-att-dl-date"><span>02</span><span>NOV</span></div>
+                <div class="dash-att-dl-info"><strong>Settlement Proposal</strong><span>Case #C-2026-0188 — 12 days remaining</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: CLIENTS ===== -->
+      <section class="dash-module" id="module-clients">
+        <div class="dash-module-header">
+          <h3>Client Management</h3>
+          <p>View and manage all clients assigned to you.</p>
+        </div>
+
+        <div class="dash-att-clients-grid">
+          <div class="dash-att-client-card">
+            <div class="dash-att-client-avatar" style="background: var(--navy-700);">JD</div>
+            <div class="dash-att-client-info">
+              <h4>John Doe</h4>
+              <span>Corporate Client</span>
+              <p>3 active cases · Since Jan 2026</p>
+            </div>
+            <div class="dash-att-client-actions">
+              <button class="dash-mini-btn download" data-module-link="messages">Message</button>
+              <button class="dash-mini-btn pay">View Cases</button>
+            </div>
+          </div>
+          <div class="dash-att-client-card">
+            <div class="dash-att-client-avatar" style="background: var(--gold-600);">SM</div>
+            <div class="dash-att-client-info">
+              <h4>Sarah Madison</h4>
+              <span>Real Estate Client</span>
+              <p>1 active case · Since Mar 2026</p>
+            </div>
+            <div class="dash-att-client-actions">
+              <button class="dash-mini-btn download">Message</button>
+              <button class="dash-mini-btn pay">View Cases</button>
+            </div>
+          </div>
+          <div class="dash-att-client-card">
+            <div class="dash-att-client-avatar" style="background: var(--info);">MH</div>
+            <div class="dash-att-client-info">
+              <h4>Mark Hull</h4>
+              <span>Corporate Client</span>
+              <p>1 active case · Since Jun 2026</p>
+            </div>
+            <div class="dash-att-client-actions">
+              <button class="dash-mini-btn download">Message</button>
+              <button class="dash-mini-btn pay">View Cases</button>
+            </div>
+          </div>
+          <div class="dash-att-client-card">
+            <div class="dash-att-client-avatar" style="background: var(--success);">LP</div>
+            <div class="dash-att-client-info">
+              <h4>Linda Park</h4>
+              <span>M&A Client</span>
+              <p>2 active cases · Since Feb 2026</p>
+            </div>
+            <div class="dash-att-client-actions">
+              <button class="dash-mini-btn download">Message</button>
+              <button class="dash-mini-btn pay">View Cases</button>
+            </div>
+          </div>
+          <div class="dash-att-client-card">
+            <div class="dash-att-client-avatar" style="background: var(--navy-500);">EG</div>
+            <div class="dash-att-client-info">
+              <h4>Eric Green</h4>
+              <span>IP Client</span>
+              <p>1 pending case · Since Sep 2026</p>
+            </div>
+            <div class="dash-att-client-actions">
+              <button class="dash-mini-btn download">Message</button>
+              <button class="dash-mini-btn pay">View Cases</button>
+            </div>
+          </div>
+          <div class="dash-att-client-card">
+            <div class="dash-att-client-avatar" style="background: var(--gold-700);">VB</div>
+            <div class="dash-att-client-info">
+              <h4>Victoria Bell</h4>
+              <span>Family Law Client</span>
+              <p>1 active case · Since Aug 2026</p>
+            </div>
+            <div class="dash-att-client-actions">
+              <button class="dash-mini-btn download">Message</button>
+              <button class="dash-mini-btn pay">View Cases</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header"><h3>Client Directory</h3></div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Name</th><th>Type</th><th>Cases</th><th>Total Billed</th><th>Last Contact</th></tr></thead>
+              <tbody>
+                <tr><td>John Doe</td><td>Corporate</td><td>3</td><td>$22,700</td><td>Oct 14</td></tr>
+                <tr><td>Sarah Madison</td><td>Real Estate</td><td>1</td><td>$8,500</td><td>Oct 12</td></tr>
+                <tr><td>Linda Park</td><td>M&A</td><td>2</td><td>$35,000</td><td>Oct 10</td></tr>
+                <tr><td>Mark Hull</td><td>Corporate</td><td>1</td><td>$6,200</td><td>Oct 8</td></tr>
+                <tr><td>Eric Green</td><td>IP</td><td>1</td><td>$2,800</td><td>Sep 28</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: SCHEDULE ===== -->
+      <section class="dash-module" id="module-schedule">
+        <div class="dash-module-header">
+          <h3>Schedule &amp; Calendar</h3>
+          <p>Manage your court dates, meetings, depositions, and personal appointments.</p>
+        </div>
+
+        <div class="dash-appt-calendar">
+          <div class="dash-cal-header">
+            <button class="dash-cal-nav" id="attCalPrev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg></button>
+            <h4 id="attCalMonthLabel">October 2026</h4>
+            <button class="dash-cal-nav" id="attCalNext"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
+          </div>
+          <div class="dash-cal-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="dash-cal-days" id="attCalDays"></div>
+        </div>
+
+        <div class="dash-two-col">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>This Week</h3></div>
+            <div class="dash-att-schedule-list">
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">Mon 9:00</span>
+                <div class="dash-att-sched-info"><strong>Client Meeting — John Doe</strong><span>Conference Room A</span></div>
+              </div>
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">Mon 11:30</span>
+                <div class="dash-att-sched-info"><strong>Court Hearing</strong><span>Supreme Court, Room 304</span></div>
+              </div>
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">Tue 2:00</span>
+                <div class="dash-att-sched-info"><strong>Deposition</strong><span>Witness interview · Office</span></div>
+              </div>
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">Wed 10:00</span>
+                <div class="dash-att-sched-info"><strong>Partners Meeting</strong><span>Monthly strategy review</span></div>
+              </div>
+              <div class="dash-att-sched-item">
+                <span class="dash-att-sched-time">Thu 3:30</span>
+                <div class="dash-att-sched-info"><strong>Contract Negotiation</strong><span>Apex Industries</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Court Dates</h3></div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead><tr><th>Date</th><th>Court</th><th>Case</th><th>Type</th></tr></thead>
+                <tbody>
+                  <tr><td>Oct 21</td><td>Supreme Court</td><td>v. Hendricks</td><td>Hearing</td></tr>
+                  <tr><td>Nov 5</td><td>Supreme Court</td><td>v. Hendricks</td><td>Trial</td></tr>
+                  <tr><td>Nov 14</td><td>Family Court</td><td>Bell custody</td><td>Conference</td></tr>
+                  <tr><td>Dec 3</td><td>Commercial</td><td>Madison LLC</td><td>Mediation</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: BILLING ===== -->
+      <section class="dash-module" id="module-billing">
+        <div class="dash-module-header">
+          <h3>Time &amp; Billing</h3>
+          <p>Track billable hours, generate invoices, and monitor revenue.</p>
+        </div>
+
+        <div class="dash-billing-summary">
+          <div class="dash-bill-card">
+            <span class="dash-bill-label">Billable This Month</span>
+            <span class="dash-bill-amount">98.5h</span>
+            <span class="dash-bill-sub">Target: 120h</span>
+          </div>
+          <div class="dash-bill-card">
+            <span class="dash-bill-label">Revenue This Month</span>
+            <span class="dash-bill-amount">$52.8k</span>
+            <span class="dash-bill-sub">82% of target</span>
+          </div>
+          <div class="dash-bill-card">
+            <span class="dash-bill-label">Pending Invoices</span>
+            <span class="dash-bill-amount">$14.2k</span>
+            <span class="dash-bill-sub">6 invoices outstanding</span>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>Time Entries — This Week</h3>
+            <button class="btn btn-gold dash-timer-btn" id="startTimer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Start Timer
+            </button>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Date</th><th>Case</th><th>Description</th><th>Hours</th><th>Rate</th><th>Amount</th></tr></thead>
+              <tbody>
+                <tr><td>Oct 20</td><td>#C-2026-0142</td><td>Discovery document review</td><td>3.5h</td><td>$450</td><td>$1,575</td></tr>
+                <tr><td>Oct 20</td><td>#C-2026-0098</td><td>Trust document drafting</td><td>2.0h</td><td>$450</td><td>$900</td></tr>
+                <tr><td>Oct 19</td><td>#C-2026-0162</td><td>Due diligence analysis</td><td>4.5h</td><td>$500</td><td>$2,250</td></tr>
+                <tr><td>Oct 19</td><td>#C-2026-0142</td><td>Client consultation</td><td>1.0h</td><td>$450</td><td>$450</td></tr>
+                <tr><td>Oct 18</td><td>#C-2026-0188</td><td>Settlement negotiation prep</td><td>2.5h</td><td>$450</td><td>$1,125</td></tr>
+                <tr><td>Oct 18</td><td>#C-2026-0175</td><td>Contract review — Apex</td><td>1.5h</td><td>$450</td><td>$675</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dash-two-col">
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Revenue by Case</h3></div>
+            <div class="dash-att-revenue-list">
+              <div class="dash-att-revenue-item">
+                <span class="dash-att-rev-name">M&A — BlueTech</span>
+                <div class="dash-mini-progress"><div style="width: 90%"></div></div>
+                <span class="dash-att-rev-amt">$18.5k</span>
+              </div>
+              <div class="dash-att-revenue-item">
+                <span class="dash-att-rev-name">v. Hendricks Corp.</span>
+                <div class="dash-mini-progress"><div style="width: 70%"></div></div>
+                <span class="dash-att-rev-amt">$14.2k</span>
+              </div>
+              <div class="dash-att-revenue-item">
+                <span class="dash-att-rev-name">Doe Family Trust</span>
+                <div class="dash-mini-progress"><div style="width: 45%"></div></div>
+                <span class="dash-att-rev-amt">$9.1k</span>
+              </div>
+              <div class="dash-att-revenue-item">
+                <span class="dash-att-rev-name">Madison LLC Dispute</span>
+                <div class="dash-mini-progress"><div style="width: 35%"></div></div>
+                <span class="dash-att-rev-amt">$7.0k</span>
+              </div>
+              <div class="dash-att-revenue-item">
+                <span class="dash-att-rev-name">Other cases</span>
+                <div class="dash-mini-progress"><div style="width: 20%"></div></div>
+                <span class="dash-att-rev-amt">$4.0k</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-header"><h3>Recent Invoices</h3></div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead><tr><th>Invoice</th><th>Client</th><th>Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>INV-042</td><td>John Doe</td><td>$4,250</td><td><span class="dash-status pending">Due</span></td></tr>
+                  <tr><td>INV-041</td><td>Linda Park</td><td>$8,500</td><td><span class="dash-status pending">Due</span></td></tr>
+                  <tr><td>INV-038</td><td>John Doe</td><td>$3,200</td><td><span class="dash-status completed">Paid</span></td></tr>
+                  <tr><td>INV-036</td><td>Sarah Madison</td><td>$2,100</td><td><span class="dash-status completed">Paid</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE: MESSAGES ===== -->
+      <section class="dash-module" id="module-messages">
+        <div class="dash-module-header">
+          <h3>Messages</h3>
+          <p>Communicate with clients and colleagues securely.</p>
+        </div>
+
+        <div class="dash-msg-layout">
+          <div class="dash-msg-sidebar">
+            <button class="dash-msg-compose">Compose New Message</button>
+            <div class="dash-msg-conv-list">
+              <div class="dash-msg-conv active" data-conv="0">
+                <div class="dash-msg-conv-avatar" style="background: var(--navy-700);">JD</div>
+                <div class="dash-msg-conv-info">
+                  <span class="dash-msg-conv-name">John Doe</span>
+                  <span class="dash-msg-conv-preview">I'll review the documents this afternoon...</span>
+                </div>
+              </div>
+              <div class="dash-msg-conv" data-conv="1">
+                <div class="dash-msg-conv-avatar" style="background: var(--gold-600);">SM</div>
+                <div class="dash-msg-conv-info">
+                  <span class="dash-msg-conv-name">Sarah Madison</span>
+                  <span class="dash-msg-conv-preview">Can we reschedule our meeting?</span>
+                </div>
+                <span class="dash-msg-conv-badge">2</span>
+              </div>
+              <div class="dash-msg-conv" data-conv="2">
+                <div class="dash-msg-conv-avatar" style="background: var(--info);">LP</div>
+                <div class="dash-msg-conv-info">
+                  <span class="dash-msg-conv-name">Linda Park</span>
+                  <span class="dash-msg-conv-preview">The due diligence report looks great...</span>
+                </div>
+                <span class="dash-msg-conv-badge">3</span>
+              </div>
+              <div class="dash-msg-conv" data-conv="3">
+                <div class="dash-msg-conv-avatar" style="background: var(--success);">VA</div>
+                <div class="dash-msg-conv-info">
+                  <span class="dash-msg-conv-name">Victoria Ashworth</span>
+                  <span class="dash-msg-conv-preview">Can you cover my court date on Friday?</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-msg-main">
+            <div class="dash-msg-header">
+              <div class="dash-msg-peer">
+                <div class="dash-msg-peer-avatar" style="background: var(--navy-700);">JD</div>
+                <div><strong>John Doe</strong><span>Client · 3 active cases</span></div>
+              </div>
+            </div>
+            <div class="dash-msg-thread" id="attMsgThread">
+              <div class="dash-msg-bubble received">
+                <p>Good morning James, I wanted to let you know that the discovery documents are now ready for review.</p>
+                <span class="dash-msg-time">Oct 14, 9:32 AM</span>
+              </div>
+              <div class="dash-msg-bubble sent">
+                <p>Thank you, John. I'll review them this afternoon. Are there any specific sections I should focus on?</p>
+                <span class="dash-msg-time">Oct 14, 10:15 AM</span>
+              </div>
+              <div class="dash-msg-bubble received">
+                <p>Yes, please pay special attention to Section 3 — the email correspondence. It's critical to our argument.</p>
+                <span class="dash-msg-time">Oct 14, 10:28 AM</span>
+              </div>
+            </div>
+            <div class="dash-msg-input-area">
+              <input type="text" id="attMsgInput" placeholder="Type your reply...">
+              <button id="attMsgSend" class="btn btn-gold dash-msg-send">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/dashboard-attorney.js"></script>
+</body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Areas — Stackly & Associates</title>
+  <meta name="description" content="Explore our practice areas — corporate law, litigation, family law, IP, real estate, criminal defense, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/practice-areas.css">
+</head>
+<body>
+
+  <div class="page-loader">
+    <div class="loader-scales"><div class="loader-scales-bowl left"></div><div class="loader-scales-bowl right"></div></div>
+    <div class="loader-text">Stackly</div>
+  </div>
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <div class="nav-wrapper">
+    <div class="nav-bar-top">
+      <div class="nav-bar-top-inner">
+        <div class="nav-top-info">
+          <span>
+            <i class="fa-solid fa-phone-volume"></i>
+            +1 (212) 555-0190
+          </span>
+          <span>
+            <i class="fa-solid fa-envelope"></i>
+            consult@Stacklylaw.com
+          </span>
+        </div>
+        <!-- ======== -->
+        <div class="nav-top-social">
+          <span style="font-size:0.75rem;color:var(--gray-300);margin-right:4px;">Follow Us</span>
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="#" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-main">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.webp" alt="Stackly & Associates" class="nav-logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="practice-areas.html" class="nav-link">Practice Areas</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-btn-login"><i class="fa-regular fa-user"></i> Client Login</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+
+  <div class="mobile-menu-overlay"></div>
+  <aside class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">STACK<span>LY</span></div>
+      <button class="mobile-menu-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-menu-link">Home <span class="menu-num">01</span></a>
+      <a href="services.html" class="mobile-menu-link">Services <span class="menu-num">02</span></a>
+      <a href="practice-areas.html" class="mobile-menu-link">Practice Areas <span class="menu-num">03</span></a>
+      <a href="about.html" class="mobile-menu-link">About <span class="menu-num">04</span></a>
+      <a href="contact.html" class="mobile-menu-link">Contact <span class="menu-num">05</span></a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="login.html" class="mobile-menu-login-btn"><i class="fa-regular fa-user"></i> Client Login</a>
+      <div class="mobile-menu-contact"><p>+1 (212) 555-0190</p><p><a href="mailto:consult@Stacklylaw.com">consult@Stacklylaw.com</a></p><p>420 Madison Avenue, New York, NY</p></div>
+    </div>
+  </aside>
+
+  <!-- ===== PAGE CONTENT ===== -->
+
+  <!-- SECTION 1: PAGE BANNER -->
+  <section class="page-banner" style="background-image: url('images/img18.webp');">
+    <div class="page-banner-overlay"></div>
+    <div class="page-banner-content container">
+      <span class="eyebrow" style="color: var(--gold-400);">Our Expertise</span>
+      <h1>Practice Areas</h1>
+      <div class="divider-gold"></div>
+      <p>Comprehensive legal expertise across multiple disciplines, each handled by dedicated specialists.</p>
+      <div class="page-banner-breadcrumb"><a href="index.html">Home</a> <span>/</span> <span class="active">Practice Areas</span></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: FILTER + GRID — UNIQUE TAB FILTER DESIGN -->
+  <section class="section section-ivory">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Areas of Practice</span>
+        <h2>Specialized Legal Expertise</h2>
+        <div class="divider-gold center"></div>
+        <p class="section-header-desc" style="color: var(--gray-600);">Filter by category to find the specific practice area that matches your needs.</p>
+      </div>
+
+      <div class="pa-filters reveal">
+        <button class="pa-filter active" data-filter="all">All Areas</button>
+        <button class="pa-filter" data-filter="business">Business</button>
+        <button class="pa-filter" data-filter="personal">Personal</button>
+        <button class="pa-filter" data-filter="disputes">Disputes</button>
+      </div>
+
+      <div class="pa-grid" id="paGrid">
+        <div class="pa-card" data-category="business">
+          <div class="pa-card-img" style="background-image: url('images/img17.webp');">
+            <div class="pa-card-overlay"></div>
+            <span class="pa-card-tag">Business</span>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+            </div>
+            <h3>Corporate Law</h3>
+            <p>Strategic counsel for business formation, mergers, acquisitions, governance, and regulatory compliance.</p>
+            <ul class="pa-card-points">
+              <li>Mergers &amp; Acquisitions</li>
+              <li>Corporate Governance</li>
+              <li>Securities Regulation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pa-card" data-category="disputes">
+          <div class="pa-card-img" style="background-image: url('images/img13.webp');">
+            <div class="pa-card-overlay"></div>
+            <span class="pa-card-tag">Disputes</span>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25M12 3c-1.5 0-2.25 1-2.25 2.25S10.5 7.5 12 7.5M12 3c1.5 0 2.25 1 2.25 2.25S13.5 7.5 12 7.5M12 7.5v2.25M5.25 6.75L7.5 12M7.5 12L5.25 9.75M7.5 12H4.5M18.75 6.75L16.5 12M16.5 12l2.25-2.25M16.5 12h3M12 17.25L5 20.25M12 17.25l7 3"/></svg>
+            </div>
+            <h3>Civil Litigation</h3>
+            <p>Aggressive representation in commercial disputes, personal injury, and complex civil matters.</p>
+            <ul class="pa-card-points">
+              <li>Commercial Disputes</li>
+              <li>Personal Injury</li>
+              <li>Appeals &amp; Arbitration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pa-card" data-category="personal">
+          <div class="pa-card-img" style="background-image: url('images/img17.webp');">
+            <div class="pa-card-overlay"></div>
+            <span class="pa-card-tag">Personal</span>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-.525 0-1.038.082-1.524.243a3.844 3.844 0 00-7.576 0A4.665 4.665 0 003 8.25c0 2.485 2.099 4.5 4.688 4.5h.018c.282.018.562.018.843.018h9.099c.28 0 .561 0 .843-.018h.018c2.588 0 4.687-2.015 4.687-4.5z"/></svg>
+            </div>
+            <h3>Family Law</h3>
+            <p>Compassionate guidance through divorce, custody, adoption, and estate planning.</p>
+            <ul class="pa-card-points">
+              <li>Divorce &amp; Separation</li>
+              <li>Child Custody</li>
+              <li>Estate Planning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pa-card" data-category="business">
+          <div class="pa-card-img" style="background-image: url('images/img19.webp');">
+            <div class="pa-card-overlay"></div>
+            <span class="pa-card-tag">Business</span>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.68.227-.815.525M3 4.5h.015M3 9h.015M3 13.5h.015M3 18h.015"/></svg>
+            </div>
+            <h3>Intellectual Property</h3>
+            <p>Protection of patents, trademarks, copyrights, and trade secrets with global enforcement.</p>
+            <ul class="pa-card-points">
+              <li>Patent Prosecution</li>
+              <li>Trademark Registration</li>
+              <li>IP Licensing &amp; Litigation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pa-card" data-category="business">
+          <div class="pa-card-img" style="background-image: url('images/img20.webp');">
+            <div class="pa-card-overlay"></div>
+            <span class="pa-card-tag">Business</span>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg>
+            </div>
+            <h3>Real Estate Law</h3>
+            <p>Full-service counsel for commercial and residential transactions, leases, and zoning.</p>
+            <ul class="pa-card-points">
+              <li>Property Closings</li>
+              <li>Lease Agreements</li>
+              <li>Zoning &amp; Land Use</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pa-card" data-category="disputes">
+          <div class="pa-card-img" style="background-image: url('images/img21.webp');">
+            <div class="pa-card-overlay"></div>
+            <span class="pa-card-tag">Disputes</span>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.105 0-2.25-.43-2.25-1.125S10.895 17.25 12 17.25m0 0c1.105 0 2.25.43 2.25 1.125S13.105 18 12 18m-3.75 3h7.5M6 6h12M6 6l1.5-3h9L18 6M6 6v12a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 18V6"/></svg>
+            </div>
+            <h3>Criminal Defense</h3>
+            <p>Vigorous defense for individuals facing criminal charges, from misdemeanors to federal cases.</p>
+            <ul class="pa-card-points">
+              <li>White Collar Defense</li>
+              <li>DUI &amp; Traffic Offenses</li>
+              <li>Federal &amp; State Trials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: STATS — UNIQUE COUNTER DESIGN -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="pa-stats-grid reveal-stagger">
+        <div class="pa-stat-item">
+          <div class="pa-stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+          </div>
+          <span class="pa-stat-num" data-count="500" data-suffix="+">0</span>
+          <span class="pa-stat-label">Cases Won</span>
+        </div>
+        <div class="pa-stat-divider"></div>
+        <div class="pa-stat-item">
+          <div class="pa-stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <span class="pa-stat-num" data-count="94" data-suffix="%">0</span>
+          <span class="pa-stat-label">Success Rate</span>
+        </div>
+        <div class="pa-stat-divider"></div>
+        <div class="pa-stat-item">
+          <div class="pa-stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span class="pa-stat-num" data-count="20" data-suffix="+">0</span>
+          <span class="pa-stat-label">Expert Attorneys</span>
+        </div>
+        <div class="pa-stat-divider"></div>
+        <div class="pa-stat-item">
+          <div class="pa-stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15"/></svg>
+          </div>
+          <span class="pa-stat-num" data-count="8" data-suffix="">0</span>
+          <span class="pa-stat-label">Practice Areas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: DETAILED FEATURE — UNIQUE ALTERNATING LAYOUT -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Deep Dive</span>
+        <h2>Featured Practice Area</h2>
+        <div class="divider-gold center"></div>
+      </div>
+
+      <div class="pa-feature">
+        <div class="pa-feature-image reveal-left">
+          <img src="images/img19.webp" alt="Legal team in conference" class="lazy-img">
+          <div class="pa-feature-badge">
+            <span>Top Rated</span>
+          </div>
+        </div>
+        <div class="pa-feature-content reveal-right">
+          <span class="eyebrow">Corporate Law</span>
+          <h2>Strategic Legal Counsel for Modern Business</h2>
+          <div class="divider-gold"></div>
+          <p>Our corporate law practice serves companies of all sizes — from startups to Fortune 500 enterprises. We provide end-to-end legal support that protects your interests while enabling growth.</p>
+
+          <div class="pa-feature-list">
+            <div class="pa-feature-item">
+              <div class="pa-feature-check">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <div>
+                <h4>Mergers &amp; Acquisitions</h4>
+                <p>Full-cycle M&amp;A support from due diligence to closing and post-merger integration.</p>
+              </div>
+            </div>
+            <div class="pa-feature-item">
+              <div class="pa-feature-check">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <div>
+                <h4>Contract Drafting</h4>
+                <p>Custom-drafted contracts that protect your interests and minimize dispute risk.</p>
+              </div>
+            </div>
+            <div class="pa-feature-item">
+              <div class="pa-feature-check">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <div>
+                <h4>Regulatory Compliance</h4>
+                <p>Proactive compliance programs that keep your business ahead of regulatory changes.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="error.html" class="btn btn-navy">Consult With Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ==========================================
+     PREMIUM SECTION 1 — LEGAL EXPERTISE
+=========================================== -->
+<section class="pa-expertise-premium">
+  <div class="pa-premium-bg"></div>
+
+  <div class="container pa-expertise-inner">
+    <div class="pa-premium-heading reveal">
+      <span class="pa-premium-eyebrow">BEYOND LEGAL REPRESENTATION</span>
+      <h2>Clarity in Complexity.<br><em>Confidence in Every Decision.</em></h2>
+      <p>
+        Every legal challenge deserves a thoughtful strategy.
+        We combine legal insight, careful preparation, and
+        dedicated representation to help you move forward.
+      </p>
+    </div>
+
+    <div class="pa-expertise-grid">
+      <article class="pa-expertise-card reveal">
+        <span class="pa-expertise-number">01</span>
+        <div class="pa-expertise-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <h3>Strategic Counsel</h3>
+        <p>
+          Understand your legal position, evaluate your options,
+          and make important decisions with greater clarity.
+        </p>
+        <span class="pa-card-line"></span>
+      </article>
+
+      <article class="pa-expertise-card reveal">
+        <span class="pa-expertise-number">02</span>
+        <div class="pa-expertise-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Risk Protection</h3>
+        <p>
+          Identify potential legal risks early and build practical
+          strategies to protect your interests and commitments.
+        </p>
+        <span class="pa-card-line"></span>
+      </article>
+
+      <article class="pa-expertise-card reveal">
+        <span class="pa-expertise-number">03</span>
+        <div class="pa-expertise-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+        <h3>Resolution Focus</h3>
+        <p>
+          Explore appropriate paths toward resolution through
+          negotiation, settlement, or formal legal proceedings.
+        </p>
+        <span class="pa-card-line"></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================
+     PREMIUM SECTION 2 — OUR APPROACH
+=========================================== -->
+<section class="pa-approach-premium">
+  <div class="container pa-approach-layout">
+
+    <div class="pa-approach-visual reveal-left">
+      <div class="pa-approach-image"></div>
+
+      <div class="pa-approach-caption">
+        <span class="pa-caption-icon">
+          <i class="fa-solid fa-gavel"></i>
+        </span>
+        <div>
+          <strong>Thoughtful. Thorough. Focused.</strong>
+          <p>A considered approach to every matter.</p>
+        </div>
+      </div>
+
+      <span class="pa-approach-decoration"></span>
+    </div>
+
+    <div class="pa-approach-content reveal-right">
+      <span class="pa-premium-eyebrow">HOW WE WORK</span>
+
+      <h2>A Process Built Around <em>Your Priorities</em></h2>
+
+      <p class="pa-approach-intro">
+        Legal matters can feel complicated. Our approach brings
+        structure to the process, helping you understand what
+        comes next and how your matter will be approached.
+      </p>
+
+      <div class="pa-process-list">
+        <div class="pa-process-item">
+          <span class="pa-process-count">01</span>
+          <div>
+            <h3>Listen & Understand</h3>
+            <p>
+              We begin by understanding your circumstances,
+              concerns, objectives, and available information.
+            </p>
+          </div>
+        </div>
+
+        <div class="pa-process-item">
+          <span class="pa-process-count">02</span>
+          <div>
+            <h3>Evaluate & Strategize</h3>
+            <p>
+              We assess the relevant issues and discuss suitable
+              options, considerations, and potential next steps.
+            </p>
+          </div>
+        </div>
+
+        <div class="pa-process-item">
+          <span class="pa-process-count">03</span>
+          <div>
+            <h3>Act & Communicate</h3>
+            <p>
+              We work toward your agreed objectives while keeping
+              communication and preparation central to the process.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <a href="error.html" class="btn btn-primary pa-approach-btn">
+        Discuss Your Matter
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     PREMIUM SECTION 3 — INDUSTRY EXPERIENCE
+=========================================== -->
+<section class="pa-industries-premium">
+  <div class="pa-industries-background"></div>
+
+  <div class="container pa-industries-inner">
+    <header class="pa-industries-heading reveal">
+      <span class="pa-premium-eyebrow">SECTOR-FOCUSED LEGAL SUPPORT</span>
+      <h2>Understanding the Industries<br><em>You Operate In</em></h2>
+      <p>
+        Legal guidance shaped around the commercial realities,
+        responsibilities, and challenges of different sectors.
+      </p>
+    </header>
+
+    <div class="pa-industry-grid">
+
+      <article class="pa-industry-card reveal">
+        <div class="pa-industry-image pa-industry-corporate"></div>
+        <div class="pa-industry-body">
+          <span>01 / BUSINESS</span>
+          <h3>Corporate & Finance</h3>
+          <p>
+            Business transactions, commercial agreements,
+            governance, and corporate legal matters.
+          </p>
+          <a href="error.html" aria-label="Enquire about corporate and finance legal services">
+            Explore <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="pa-industry-card reveal">
+        <div class="pa-industry-image pa-industry-property"></div>
+        <div class="pa-industry-body">
+          <span>02 / PROPERTY</span>
+          <h3>Real Estate & Infrastructure</h3>
+          <p>
+            Property transactions, documentation, disputes,
+            and real estate-related legal concerns.
+          </p>
+          <a href="error.html" aria-label="Enquire about real estate legal services">
+            Explore <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="pa-industry-card reveal">
+        <div class="pa-industry-image pa-industry-technology"></div>
+        <div class="pa-industry-body">
+          <span>03 / INNOVATION</span>
+          <h3>Technology & Innovation</h3>
+          <p>
+            Intellectual property, technology agreements,
+            and protection of business interests.
+          </p>
+          <a href="error.html" aria-label="Enquire about technology and intellectual property legal services">
+            Explore <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="pa-industry-card reveal">
+        <div class="pa-industry-image pa-industry-healthcare"></div>
+        <div class="pa-industry-body">
+          <span>04 / PROFESSIONAL</span>
+          <h3>Healthcare & Services</h3>
+          <p>
+            Contractual issues, professional responsibilities,
+            and related civil or commercial matters.
+          </p>
+          <a href="error.html" aria-label="Enquire about healthcare and professional legal services">
+            Explore <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================
+     PREMIUM SECTION 4 — CONSULTATION CTA
+=========================================== -->
+<section class="pa-consultation-premium">
+  <div class="pa-consultation-bg"></div>
+  <div class="pa-consultation-overlay"></div>
+
+  <div class="container pa-consultation-content reveal">
+    <span class="pa-premium-eyebrow">YOUR NEXT STEP STARTS HERE</span>
+
+    <div class="pa-consultation-ornament">
+      <span></span>
+      <i class="fa-solid fa-scale-balanced"></i>
+      <span></span>
+    </div>
+
+    <h2>When the Stakes Are High,<br><em>Choose Clarity.</em></h2>
+
+    <p>
+      Tell us about your legal concerns. Our team can help you
+      understand the available options and discuss a suitable way forward.
+    </p>
+
+    <div class="pa-consultation-actions">
+      <a href="error.html" class="btn btn-primary">
+        Request a Consultation
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <a href="error.html" class="pa-consultation-secondary">
+        Explore Our Expertise
+      </a>
+    </div>
+
+    <span class="pa-consultation-footnote">
+      Confidentiality and professional obligations apply in accordance
+      with the circumstances and applicable law.
+    </span>
+  </div>
+</section>
+
+
+  <!-- SECTION 5: INDUSTRIES SERVED — UNIQUE ICON GRID -->
+  <section class="section section-ivory">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="eyebrow">Industries We Serve</span>
+        <h2>Sector-Specific Legal Expertise</h2>
+        <div class="divider-gold center"></div>
+        <p class="section-header-desc" style="color: var(--gray-600);">We understand the unique legal challenges that different industries face.</p>
+      </div>
+
+      <div class="industries-grid reveal-stagger">
+        <div class="industry-card">
+          <div class="industry-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+          <h3>Finance &amp; Banking</h3>
+          <p>Regulatory compliance, lending, and transactional support for financial institutions.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+          <h3>Technology</h3>
+          <p>IP protection, data privacy, software licensing, and tech transaction services.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-.525 0-1.038.082-1.524.243a3.844 3.844 0 00-7.576 0A4.665 4.665 0 003 8.25c0 2.485 2.099 4.5 4.688 4.5h.018c.282.018.562.018.843.018h9.099c.28 0 .561 0 .843-.018h.018c2.588 0 4.687-2.015 4.687-4.5z"/></svg>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 3" style="display:none;"/></div>
+          <h3>Healthcare</h3>
+          <p>Regulatory compliance, medical malpractice defense, and healthcare transactional work.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+          <h3>Real Estate</h3>
+          <p>Development, acquisition, leasing, and zoning for commercial and residential properties.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg></div>
+          <h3>Manufacturing</h3>
+          <p>Supply chain contracts, product liability defense, and regulatory compliance.</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg></div>
+          <h3>Education</h3>
+          <p>Compliance, governance, employment matters, and student-related legal issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CTA -->
+  <section class="section cta-banner-pa">
+    <div class="cta-pa-bg" style="background-image: url('images/img22.webp');"></div>
+    <div class="cta-pa-overlay"></div>
+    <div class="container cta-pa-content reveal-scale">
+      <h2>Find Your Practice Area</h2>
+      <div class="divider-gold center"></div>
+      <p>Not sure which practice area fits your needs? Our intake team will guide you to the right specialist.</p>
+      <div class="cta-pa-actions">
+        <a href="contact.html" class="btn btn-gold">Get Help Now</a>
+        <a href="services.html" class="btn btn-outline-light">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-pattern"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.webp" alt="Stackly & Associates" class="nav-logo-img">
+          </a>
+          <p>Premier legal consulting firm with over 35 years of experience serving corporations, families, and individuals with integrity and excellence.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="practice-areas.html">Practice Areas</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="login.html">Client Login</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Practice Areas</h4>
+          <ul class="footer-links"><li><a href="practice-areas.html">Corporate Law</a></li><li><a href="practice-areas.html">Civil Litigation</a></li><li><a href="practice-areas.html">Family Law</a></li><li><a href="practice-areas.html">Intellectual Property</a></li><li><a href="practice-areas.html">Real Estate</a></li><li><a href="practice-areas.html">Criminal Defense</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <!-- Office -->
+           <div class="footer-contact-item">
+             <i class="fa-solid fa-location-dot"></i>
+             <span>
+               <strong>Office</strong>
+               420 Madison Avenue, 18th Floor<br>
+               New York, NY 10017
+             </span>
+           </div>
+           
+           <!-- Phone -->
+           <div class="footer-contact-item">
+             <i class="fa-solid fa-phone"></i>
+             <span>
+
+               <strong>Phone</strong>
+               +1 (212) 555-0190
+             </span>
+           </div>
+           
+           <!-- Email -->
+           <div class="footer-contact-item">
+             <i class="fa-solid fa-envelope"></i>
+             <span>
+               <strong>Email</strong>
+               consult@Stacklylaw.com
+             </span>
+           </div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Stackly &amp; Associates. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Disclaimer</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/></svg></button>
+
+  <script src="js/common.js"></script>
+  <script src="js/practice-areas.js"></script>
+</body>
+</html>

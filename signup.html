@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a1628">
+  <title>Create Account | Stackly & Associates</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/signup.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="signup-page">
+
+  <header class="signup-header">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+      <span class="brand-copy">
+        <strong>Stackly</strong>
+        <small>& ASSOCIATES</small>
+      </span>
+    </a>
+
+    <a href="index.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back to website</span>
+    </a>
+  </header>
+
+  <main class="signup-layout">
+
+    <!-- LEFT BRAND PANEL -->
+    <aside class="signup-visual">
+      <div class="visual-overlay"></div>
+
+      <div class="visual-content">
+        <span class="eyebrow">
+          <span></span> YOUR TRUSTED LEGAL PARTNER
+        </span>
+
+        <h1>Justice begins<br>with the <em>right people.</em></h1>
+
+        <p>
+          Build a stronger legal future with experienced professionals,
+          trusted guidance and a commitment to protecting what matters.
+        </p>
+
+        <div class="visual-divider"></div>
+
+        <div class="visual-points">
+          <div>
+            <span class="point-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <div>
+              <strong>Confidential by design</strong>
+              <small>Your privacy matters to us.</small>
+            </div>
+          </div>
+
+          <div>
+            <span class="point-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+            <div>
+              <strong>Professional legal support</strong>
+              <small>Connect with the right legal expertise.</small>
+            </div>
+          </div>
+
+          <div>
+            <span class="point-icon"><i class="fa-solid fa-handshake"></i></span>
+            <div>
+              <strong>Built on trust</strong>
+              <small>Relationships grounded in integrity.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual-footer">
+        <span>INTEGRITY</span>
+        <i></i>
+        <span>EXCELLENCE</span>
+        <i></i>
+        <span>JUSTICE</span>
+      </div>
+    </aside>
+
+    <!-- RIGHT SIGNUP FORM -->
+    <section class="signup-main">
+      <div class="signup-card">
+
+        <div class="mobile-brand-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+
+        <div class="form-heading">
+          <span class="form-kicker">JOIN Stackly</span>
+          <h2>Create your account</h2>
+          <p>Enter your details to get started with us.</p>
+        </div>
+
+        <form id="signupForm" novalidate>
+
+          <!-- ROLE SELECTION -->
+          <fieldset class="role-fieldset">
+            <legend>I want to join as a</legend>
+
+            <div class="role-options">
+
+              <label class="role-option">
+                <input type="radio" name="role" value="client" checked>
+
+                <span class="role-card">
+                  <span class="role-icon">
+                    <i class="fa-solid fa-user"></i>
+                  </span>
+
+                  <span class="role-details">
+                    <strong>Client</strong>
+                    <small>Find legal guidance</small>
+                  </span>
+
+                  <span class="role-check">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </span>
+              </label>
+
+              <label class="role-option">
+                <input type="radio" name="role" value="attorney">
+
+                <span class="role-card">
+                  <span class="role-icon">
+                    <i class="fa-solid fa-gavel"></i>
+                  </span>
+
+                  <span class="role-details">
+                    <strong>Attorney</strong>
+                    <small>Join as a legal professional</small>
+                  </span>
+
+                  <span class="role-check">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <!-- FULL NAME -->
+          <div class="form-group">
+            <label for="name">Full name</label>
+
+            <div class="input-wrap">
+              <i class="fa-regular fa-user input-icon"></i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              >
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <label for="signupEmail">Email address</label>
+
+            <div class="input-wrap">
+              <i class="fa-regular fa-envelope input-icon"></i>
+              <input
+                type="email"
+                id="signupEmail"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+
+            <div class="input-wrap">
+              <i class="fa-solid fa-lock input-icon"></i>
+
+              <input
+                type="password"
+                id="signupPassword"
+                name="password"
+                placeholder="Create a strong password"
+                autocomplete="new-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="togglePassword"
+                aria-label="Show password"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+
+            <small class="field-hint">
+              8+ characters with uppercase, lowercase, number and symbol.
+            </small>
+          </div>
+
+          <!-- CONFIRM PASSWORD -->
+          <div class="form-group">
+            <label for="confirmPassword">Confirm password</label>
+
+            <div class="input-wrap">
+              <i class="fa-solid fa-shield-halved input-icon"></i>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Enter your password again"
+                autocomplete="new-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="toggleConfirmPassword"
+                aria-label="Show password"
+              >
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- TERMS -->
+          <label class="terms-row">
+            <input type="checkbox" name="terms" required>
+            <span>
+              I agree to the
+              <a href="terms.html">Terms of Service</a>
+              and
+              <a href="privacy.html">Privacy Policy</a>.
+            </span>
+          </label>
+
+          <!-- MESSAGE IS INSERTED HERE BY JS -->
+          <button type="submit" class="signup-submit">
+            <span>Create Account</span>
+            <span class="submit-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </button>
+
+          <div class="security-note">
+            <i class="fa-solid fa-lock"></i>
+            Your information is handled with care.
+          </div>
+
+        </form>
+
+        <div class="login-prompt">
+          Already have an account?
+          <a href="login.html">Sign in</a>
+        </div>
+
+        <p class="form-disclaimer">
+          Attorney registration does not itself verify professional
+          credentials or grant access to a legal practice.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/signup.js"></script>
+</body>
+</html>
