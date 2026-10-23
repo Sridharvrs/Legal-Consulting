@@ -1,3 +1,26 @@
+
+// Get the logged-in user
+const currentUser = JSON.parse(
+  localStorage.getItem("stacklyCurrentUser") ||
+  sessionStorage.getItem("stacklyCurrentUser") ||
+  "null"
+);
+
+if (currentUser?.name) {
+  // Display dynamic name
+  document.querySelectorAll(".profileName").forEach((element) => {
+    element.textContent = currentUser.name;
+  });
+
+  // Display first letter in avatar
+  const firstLetter = currentUser.name.trim().charAt(0).toUpperCase();
+
+  document.querySelectorAll(".avatar").forEach((element) => {
+    element.textContent = firstLetter;
+  });
+}
+
+
 /* ========================================
    CLIENT DASHBOARD — JAVASCRIPT
    Module switching, sidebar toggle, calendar,

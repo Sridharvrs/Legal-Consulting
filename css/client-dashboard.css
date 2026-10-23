@@ -1,0 +1,29 @@
+/* ===== MOBILE SIDEBAR BELOW FIXED TOPBAR ===== */
+@media (max-width: 768px) {
+  .dash-topbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    z-index: 9999;
+  }
+
+  .dash-sidebar {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    height: calc(100vh - 64px);
+    z-index: 9998;
+    overflow-y: auto;
+  }
+
+  .dash-main {
+    padding-top: 64px;
+  }
+
+  #topbarDate{
+    display: none;
+  }
+}
