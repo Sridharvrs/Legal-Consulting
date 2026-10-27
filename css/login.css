@@ -862,6 +862,7 @@
 .back-website {
   font-size: 14px;
   font-weight: 500;
+  color: rgba(229, 225, 225, 0.982);
 }
 
 /* Left visual panel */
@@ -1068,4 +1069,16 @@
   .login-disclaimer {
     font-size: 10px;
   }
+}
+
+.back-website{
+    color: white ;
+}
+
+@media (min-width: 1100px){
+
+    .back-website {
+      color: #262525 ;
+    }
+
 }

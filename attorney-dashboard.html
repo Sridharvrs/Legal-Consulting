@@ -150,9 +150,9 @@
         <div class="dash-welcome-banner">
           <div class="dash-welcome-text">
             <span class="eyebrow" style="color: var(--gold-400);">Attorney Dashboard</span>
-            <h2>Welcome, James Whitfield</h2>
+            <h2>Welcome, <span class="profileName"> Name </span> </h2>
             <p>You have 3 court dates this week, 5 unread client messages, and 2 cases awaiting your review.</p>
-            <a href="#" class="btn btn-gold dash-welcome-btn" data-module-link="caseload">View Caseload</a>
+            <a href="dashboardError.html" class="btn btn-gold dash-welcome-btn" >View Caseload</a> <!-- data-module-link="caseload" --> 
           </div>
           <div class="dash-welcome-illustration">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25M12 3c-1.5 0-2.25 1-2.25 2.25S10.5 7.5 12 7.5M12 3c1.5 0 2.25 1 2.25 2.25S13.5 7.5 12 7.5M12 7.5v2.25M5.25 6.75L7.5 12M7.5 12L5.25 9.75M7.5 12H4.5M18.75 6.75L16.5 12M16.5 12l2.25-2.25M16.5 12h3M12 17.25L5 20.25M12 17.25l7 3"/></svg>
@@ -163,7 +163,7 @@
           <div class="dash-card">
             <div class="dash-card-header">
               <h3>Today's Schedule</h3>
-              <a href="#" class="dash-card-link" data-module-link="schedule">Full Calendar</a>
+              <a href="dashboardError.html" class="dash-card-link" >Full Calendar</a> <!-- data-module-link="schedule" -->
             </div>
             <div class="dash-att-schedule-list">
               <div class="dash-att-sched-item">
@@ -204,7 +204,7 @@
           <div class="dash-card">
             <div class="dash-card-header">
               <h3>Cases Needing Attention</h3>
-              <a href="#" class="dash-card-link" data-module-link="caseload">All Cases</a>
+              <a href="dashboardError.html" class="dash-card-link" >All Cases</a> <!-- data-module-link="caseload" -->
             </div>
             <div class="dash-att-attention-list">
               <div class="dash-att-attention-item">
@@ -385,8 +385,9 @@
               <p>3 active cases · Since Jan 2026</p>
             </div>
             <div class="dash-att-client-actions">
-              <button class="dash-mini-btn download" data-module-link="messages">Message</button>
-              <button class="dash-mini-btn pay">View Cases</button>
+              
+              <button class="dash-mini-btn download" onclick="window.location.href='dashboardError.html'">Message</button> <!-- data-module-link="messages" -->
+              <button class="dash-mini-btn pay" onclick="window.location.href='dashboardError.html'">View Cases</button>
             </div>
           </div>
           <div class="dash-att-client-card">
@@ -397,8 +398,8 @@
               <p>1 active case · Since Mar 2026</p>
             </div>
             <div class="dash-att-client-actions">
-              <button class="dash-mini-btn download">Message</button>
-              <button class="dash-mini-btn pay">View Cases</button>
+              <button class="dash-mini-btn download" onclick="window.location.href='dashboardError.html'">Message</button>
+              <button class="dash-mini-btn pay" onclick="window.location.href='dashboardError.html'">View Cases</button>
             </div>
           </div>
           <div class="dash-att-client-card">
@@ -409,8 +410,8 @@
               <p>1 active case · Since Jun 2026</p>
             </div>
             <div class="dash-att-client-actions">
-              <button class="dash-mini-btn download">Message</button>
-              <button class="dash-mini-btn pay">View Cases</button>
+              <button class="dash-mini-btn download" onclick="window.location.href='dashboardError.html'">Message</button>
+              <button class="dash-mini-btn pay" onclick="window.location.href='dashboardError.html'">View Cases</button>
             </div>
           </div>
           <div class="dash-att-client-card">
@@ -421,8 +422,8 @@
               <p>2 active cases · Since Feb 2026</p>
             </div>
             <div class="dash-att-client-actions">
-              <button class="dash-mini-btn download">Message</button>
-              <button class="dash-mini-btn pay">View Cases</button>
+              <button class="dash-mini-btn download" onclick="window.location.href='dashboardError.html'">Message</button>
+              <button class="dash-mini-btn pay" onclick="window.location.href='dashboardError.html'">View Cases</button>
             </div>
           </div>
           <div class="dash-att-client-card">
@@ -433,8 +434,8 @@
               <p>1 pending case · Since Sep 2026</p>
             </div>
             <div class="dash-att-client-actions">
-              <button class="dash-mini-btn download">Message</button>
-              <button class="dash-mini-btn pay">View Cases</button>
+              <button class="dash-mini-btn download" onclick="window.location.href='dashboardError.html'">Message</button>
+              <button class="dash-mini-btn pay" onclick="window.location.href='dashboardError.html'">View Cases</button>
             </div>
           </div>
           <div class="dash-att-client-card">
@@ -445,8 +446,8 @@
               <p>1 active case · Since Aug 2026</p>
             </div>
             <div class="dash-att-client-actions">
-              <button class="dash-mini-btn download">Message</button>
-              <button class="dash-mini-btn pay">View Cases</button>
+              <button class="dash-mini-btn download" onclick="window.location.href='dashboardError.html'">Message</button>
+              <button class="dash-mini-btn pay" onclick="window.location.href='dashboardError.html'">View Cases</button>
             </div>
           </div>
         </div>
@@ -477,9 +478,9 @@
 
         <div class="dash-appt-calendar">
           <div class="dash-cal-header">
-            <button class="dash-cal-nav" id="attCalPrev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg></button>
+            <button class="dash-cal-nav" id="attCalPrev"><i class="fa-solid fa-chevron-left"></i></button>
             <h4 id="attCalMonthLabel">October 2026</h4>
-            <button class="dash-cal-nav" id="attCalNext"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
+            <button class="dash-cal-nav" id="attCalNext"><i class="fa-solid fa-chevron-right"></i></button>
           </div>
           <div class="dash-cal-weekdays">
             <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
@@ -559,7 +560,7 @@
         <div class="dash-card">
           <div class="dash-card-header">
             <h3>Time Entries — This Week</h3>
-            <button class="btn btn-gold dash-timer-btn" id="startTimer">
+            <button class="btn btn-gold dash-timer-btn" onclick="window.location.href='dashboardError.html'" > <!-- id="startTimer" -->
               <i class="fa-solid fa-clock"></i>
               Start Timer
             </button>
@@ -695,9 +696,9 @@
             </div>
             <div class="dash-msg-input-area">
               <input type="text" id="attMsgInput" placeholder="Type your reply...">
-              <button id="attMsgSend" class="btn btn-gold dash-msg-send">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
-              </button>
+              <button class="btn btn-gold dash-msg-send" onclick="window.location.href='dashboardError.html'">
+                <i class="fa-solid fa-location-arrow"></i>
+              </button>  <!-- id="attMsgSend" -->
             </div>
           </div>
         </div>

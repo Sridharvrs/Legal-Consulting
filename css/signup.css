@@ -93,7 +93,7 @@ body.signup-page {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: #474748 !important;
+  color: #eeeeee !important;
   font-size: 13px;
   text-decoration: none;
   transition: color 0.25s ease;
@@ -110,6 +110,7 @@ body.signup-page {
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   min-height: 100vh;
 }
+
 
 /* LEFT VISUAL */
 
@@ -692,6 +693,14 @@ body.signup-page {
 }
 
 /* RESPONSIVE */
+
+@media (min-width: 1100px){
+
+    .back-link {
+      color: #eeeeee !important;
+    }
+
+}
 
 @media (max-width: 1100px) {
   .signup-layout {
